@@ -22,7 +22,7 @@
   font-family: "Helvetica", sans-serif;
 }
 .tk-Helvetica{
-  font-family: "Helvetica Neue", sans-serif;
+  font-family: "helvetica-neue-condensed", sans-serif;
 }
 body {
 	font-size: 19px;
@@ -56,7 +56,18 @@ img{
   max-width: 100%;
   height: auto;
 }
-
+/* paralax img */
+.trigger-parallax {
+  overflow: hidden;
+  position: relative;
+}
+.parallax-img {
+  height: calc(100% + 120px);
+  width: 100%;
+  object-fit: cover;
+  transform: translateY(0);
+}
+/* paralax img */
 a {
 	text-decoration: none;
 	color: #000;
@@ -79,7 +90,7 @@ img {
 
 /* container */
 .container {
-	max-width: 1280px;
+	max-width: 1434px;
 }
 
 /* z-index */
@@ -102,7 +113,7 @@ h6 {
 	color: #000;
 	font-weight: 700;
 	line-height: 1.2;
-	font-family: "Helvetica Neue", sans-serif;
+	font-family: "helvetica-neue-condensed", sans-serif;
 }
 
 h1 {
@@ -198,6 +209,125 @@ h6 {
 }
 
 /* section padding */
+
+
+/* offcanvas */
+.offcanvas, .offcanvas-lg, .offcanvas-md, .offcanvas-sm, .offcanvas-xl, .offcanvas-xxl {
+  --bs-offcanvas-zindex: 1045;
+  --bs-offcanvas-width: 100%;
+  --bs-offcanvas-color: var(--bs-body-color);
+  --bs-offcanvas-bg: #191919;
+}
+
+.offcanvas-header {
+  padding: 0 70px;
+}
+.offcanvas-body {
+  padding: 0 94px;
+}
+.offcanvas-menu-wrapper {
+  padding-left: 54px;
+  margin-top: 65px;
+}
+/* main menu */
+.main-menu {
+  width: calc(50% - 364px);
+}
+.main-menu ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.main-menu > ul li{
+  position: relative;
+  z-index: 1;
+}
+.main-menu > ul > li{
+  display: block;
+  margin-bottom: 36px;
+
+
+}
+.main-menu > ul li > a{
+  color: #FFF;
+	font-family: "Chivo Mono", monospace;
+  font-size: 55px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  transition: all 0.3s linear;
+  display: inline-block;
+}
+.main-menu ul li:last-child{
+  margin-bottom: 0;
+}
+
+.emergency-wrapper a ,
+.emergency-wrapper h6 {
+  color: rgba(255, 255, 255, 0.50);
+  font-family: "helvetica-neue-condensed", sans-serif;
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 1.35;
+  margin-bottom: 0;
+  transition: all 0.3s linear;
+}
+.main-menu > ul li > .sub-menu li > a:hover,
+.emergency-wrapper a:hover ,
+.main-menu > ul > li:hover > a{
+  color: #C1132A;
+}
+
+.emergency-wrapper {
+  margin-top: 68px;
+}
+
+.sub-menu {
+  position: absolute;
+  left: 100%;
+  width: 500px;
+  top: 0px;
+  opacity: 0;
+  visibility: hidden;
+}
+.main-menu .sub-menu li a{
+  color: #FFF;
+  font-family: "helvetica-neue-condensed", sans-serif;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 1.78;
+}
+
+.progress-bar-wrapper {
+  position: absolute;
+  top: 0;
+  left: calc(50% - 434px);
+  height: 100%;
+  width: 1px;
+  background-color: rgba(255, 255, 255, 0.80);
+}
+.progress-bar{
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  height: 55px;
+  width: 2.5px;
+  background-color: #C1132A;
+  transform: translateX(-50%);
+  display: inline-block;
+  opacity: 0;
+  visibility: visible;
+  transition: all 0.3s linear;
+}
+
+/* main menu */
+
+
+
+
+
+
+/* offcanvas */
 
 
 /* header section start */
@@ -339,13 +469,50 @@ h6 {
 
 
 /* content block section start */
+
+
+/* section title */
+.white-section .section-title {
+  background: #fff;
+}
+.bg-rangoon-green .section-title {
+  background: #191919;
+  color: #fff;
+}
+.title-section-wrapper  {
+  width: 24px;
+  height: 100%;
+  top: 0;
+  position: absolute;
+}
+.section-title {
+  color: #000;
+  font-family: "Chivo Mono", monospace;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.2;
+  text-transform: uppercase;
+  margin-bottom: 0;
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+  padding: 30px 0;
+  writing-mode: tb-rl;
+  transform: rotate(180deg);
+}
+.title-section-info::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 3px;
+  background-color: #991627;
+}
+/* section title */
 .content-block-area {
   padding: 112px 0 121px;
 } 
-
-.content-block-area .container {
-  max-width: 1434px;
-}
 .content-block-img {
   position: relative;
   z-index: 1;
@@ -470,10 +637,7 @@ h6 {
 
 
 /* map section start  */
-.map-area .container{
-  max-width: 1338px;
-}
-.map-area h2 {
+.map-area h3 {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -493,13 +657,7 @@ h6 {
 .about-area{
   padding: 104px 0 97px;
 }
-.about-area .container {
-  max-width: 1430px;
-}
-.about-content-wrapper {
-  /* gap: 87px; */
-}
-.about-content-wrapper h2 {
+.about-content h2 {
   margin-bottom: 0;
 }
 .about-img-wrapper {
@@ -560,9 +718,6 @@ h6 {
 .cta-content h2 {
   color: #fff;
 }
-.cta-area  .container {
-  max-width: 1424px;
-}
 .cta-content .transparent-btn{
   margin-top: 20px;
 }
@@ -583,7 +738,7 @@ h6 {
   line-height: 1.71;
   font-weight: 400;
   font-size: 18px;
-  font-family: "Helvetica Neue", sans-serif;
+  font-family: "helvetica-neue-condensed", sans-serif;
   transition: all 0.3s linear;
 }
 .footer-item ul li a:hover{
@@ -608,6 +763,9 @@ h6 {
 .footer-inner-item ul li {
   margin-bottom: 26px;
 }
+.footer-inner-item ul li:last-child{
+  margin-bottom: 0;
+}
 .footer-inner-item {
   margin-top: 30px;
 }
@@ -621,13 +779,13 @@ h6 {
   color: #C1132A;
 }
 .conact-item ul li a ,
-.conact-item ul li span {
+.conact-item ul li .contact-title-info {
   font-size: 18px;
   line-height: 1.62;
   color: #C1132A;
   font-weight: 400;
   display: inline-block;
-  font-family: "Helvetica Neue", sans-serif;
+  font-family: "helvetica-neue-condensed", sans-serif;
 }
 .conact-item ul li span{
   margin-right: 10px;
@@ -649,6 +807,24 @@ h6 {
 .top-footer-wrapper{
   padding: 80px 0 105px;
   border-bottom: 0.5px solid #fff;
+  position: relative;
+  z-index: 1;
+}
+.top-footer-wrapper::before {
+  content: "";
+  position: absolute;
+  left: calc(50% - 165px);
+  top: 0;
+  height: 100%;
+  width: 0.5px;
+  background-color: #FFF;
+}
+.main-footer-wrapper .row  ,
+.top-footer-wrapper .container > .row {
+  --bs-gutter-y: 35px;
+}
+.main-footer-wrapper {
+  padding-left: 112px;
 }
 .copy-right-wrapper .container{
   max-width: 1420px;
@@ -660,7 +836,7 @@ h6 {
 .copy-right-caption a,
 .copy-right-caption p{
   color: rgba(255, 255, 255, 0.50);
-  font-family: "Helvetica Neue", sans-serif;
+  font-family: "helvetica-neue-condensed", sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 1.5; 
@@ -683,4 +859,6 @@ h6 {
 .copy-right-wrapper .row {
   --bs-gutter-y: 10px;
 }
+
 /* footer section end */
+

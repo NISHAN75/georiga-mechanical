@@ -15,6 +15,94 @@
 	</head>
 	<body>
 
+
+		<!-- offcanvs section start -->
+		<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+		  <div class="offcanvas-header justify-content-between">
+			<a href="#" class="main-logo">
+				<img src="assets/images/logo/main-logo.svg" alt="...">
+			</a>
+			<div class="right-header-wrapper d-flex align-items-center justify-content-end flex-wrap">
+				<a href="#" class="georgia-btn d-none d-md-block border-0">Contact</a>
+				<button type="button" class="header-toogle d-flex align-items-center" data-bs-dismiss="offcanvas" aria-label="Close">
+					<span>Close</span>
+					<span class="menu-icon">
+						<span></span>
+						<span></span>
+						<span></span>
+					</span>
+				</button>
+			</div>
+			
+		  </div>
+		  <div class="offcanvas-body">
+			 <div class="offcanvas-menu-wrapper position-relative z-1">
+				<nav class="main-menu">
+					<ul>
+						<li class="menu-link"><a href="#">about us</a>
+							<ul class="sub-menu">
+								<li><a href="#">Education</a></li>
+								<li><a href="#">Retail</a></li>
+								<li><a href="#">Hospitality</a></li>
+								<li><a href="#">Cold Storage</a></li>
+								<li><a href="#">Foodservice</a></li>
+								<li><a href="#">Industrial</a></li>
+								<li><a href="#">Automotive Dealerships</a></li>
+								<li><a href="#">Financial Instituitons</a></li>
+								<li><a href="#">Disaster Relief/Response</a></li>
+							</ul>
+						</li>
+						<li class="menu-link"><a href="#">Services</a>
+							<ul class="sub-menu">
+								<li><a href="#" >1Education</a></li>
+								<li><a href="#">Retail</a></li>
+								<li><a href="#">Hospitality</a></li>
+								<li><a href="#">Cold Storage</a></li>
+								<li><a href="#">Foodservice</a></li>
+								<li><a href="#">Industrial</a></li>
+								<li><a href="#">Automotive Dealerships</a></li>
+								<li><a href="#">Financial Instituitons</a></li>
+								<li><a href="#">Disaster Relief/Response</a></li>
+							</ul></li>
+						<li class="menu-link"><a href="#">industries</a>
+							<ul class="sub-menu">
+								<li><a href="#" >2Education</a></li>
+								<li><a href="#">Retail</a></li>
+								<li><a href="#">Hospitality</a></li>
+								<li><a href="#">Cold Storage</a></li>
+								<li><a href="#">Foodservice</a></li>
+								<li><a href="#">Industrial</a></li>
+								<li><a href="#">Automotive Dealerships</a></li>
+								<li><a href="#">Financial Instituitons</a></li>
+								<li><a href="#">Disaster Relief/Response</a></li>
+							</ul>
+						</li>
+						<li class="menu-link"><a href="#">careers</a>
+							<ul class="sub-menu">
+								<li><a href="#" >Education</a></li>
+								<li><a href="#">Retail</a></li>
+								<li><a href="#">Hospitality</a></li>
+								<li><a href="#">Cold Storage</a></li>
+								<li><a href="#">Foodservice</a></li>
+								<li><a href="#">Industrial</a></li>
+								<li><a href="#">Automotive Dealerships</a></li>
+								<li><a href="#">Financial Instituitons</a></li>
+								<li><a href="#">Disaster Relief/Response</a></li>
+							</ul></li>
+					</ul>
+					<div class="emergency-wrapper">
+						<h6>Emergency Services</h6>
+						<a href="tel:770-802-1123">770-802-1123</a>
+					</div>
+				</nav>
+				<div class="progress-bar-wrapper">
+					<div class="progress-bar"></div>
+				</div>
+			 </div>
+		  </div>
+		</div>
+		<!-- offcanvs section end -->
+
 		<!-- header section start -->
 		<header class="header-area">
 			<div class="top-header-caption text-center bg-lipstick-red mb-p"><p>24/7 Emergency Services - <a href="#">Learn More</a></p></div>
@@ -29,7 +117,7 @@
 						<div class="col-6">
 							<div class="right-header-wrapper d-flex align-items-center justify-content-end flex-wrap">
 								<a href="#" class="georgia-btn d-none d-md-block border-0">Contact</a>
-								<button type="button" class="header-toogle d-flex align-items-center">
+								<button type="button" class="header-toogle d-flex align-items-center" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
 									<span>Menu</span>
 									<span class="menu-icon">
 										<span></span>
@@ -66,13 +154,20 @@
 			<!-- banner section end -->
 
 			<!-- content block section start -->
-			<section class="content-block-area">
-				<div class="container">
-					<div class="content-block-item">
+			<section class="content-block-area overflow-hidden  position-relative z-1">
+				<div class="title-section-wrapper white-section">
+					<div class="title-section-info position-relative z-1">
+						<h2 class="section-title">OUR SERVICES</h2>
+					</div>
+				</div>
+				<div class="container end-sidebar">
+					<div class="content-block-item ">
 						<div class="row align-items-center">
 							<div class="col-lg-6">
 								<div class="content-block-img shpae-clip shpae-left-top">
-									<img src="assets/images/content-block/content-block-01.jpg" alt="....">
+									<div class="trigger-parallax">
+										<img src="assets/images/content-block/content-block-01.jpg" alt="...." class="parallax-img">
+									</div>
 								</div>
 							</div>
 							<div class="col-lg-6">
@@ -95,7 +190,9 @@
 						<div class="row align-items-center">
 							<div class="col-lg-6">
 								<div class="content-block-img shpae-clip shpae-right-top">
-									<img src="assets/images/content-block/content-block-01.jpg" alt="....">
+									<div class="trigger-parallax">
+										<img src="assets/images/content-block/content-block-01.jpg" alt="...." class="parallax-img">
+									</div>
 								</div>
 							</div>
 							<div class="col-lg-6">
@@ -114,13 +211,17 @@
 							</div>
 						</div>
 					</div>
-
 				</div>
 			</section>
 			<!-- contact block section end -->
 
 			<!-- industries section start -->
-			<section class="industries-area section-padding bg-rangoon-green">
+			<section class="industries-area section-padding bg-rangoon-green position-relative z-1 overflow-hidden">
+				<div class="title-section-wrapper white-section">
+					<div class="title-section-info position-relative z-1">
+						<h2 class="section-title">OUR SERVICES</h2>
+					</div>
+				</div>
 				<div class="container">
 					<div class="row">
 						<div class="col-lg-3 col-md-6">
@@ -191,39 +292,55 @@
 			<!-- industries section end -->
 
 			<!-- map section start -->
-			<section class="map-area section-padding bg-rangoon-green position-relative z-1 text-center">
+			<section class="map-area section-padding bg-rangoon-green position-relative z-1 text-center overflow-hidden">
+				<div class="title-section-wrapper white-section position-relative">
+					<div class="title-section-info position-relative z-1">
+						<h2 class="section-title">OUR SERVICES</h2>
+					</div>
+				</div>
 				<div class="container">
 					<img src="assets/images/map/map.svg" alt="...">
-					<h2 class="animation-text">we’ve got you covered</h2>
+					<h3 class="animation-text">we’ve got you covered</h3>
 				</div>
 			</section>
 			<!-- map section end -->
 
 			<!-- about section start -->
 
-			<section class="about-area overflow-hidden">
+			<section class="about-area overflow-hidden position-relative z-1">
+				<div class="title-section-wrapper white-section position-relative">
+					<div class="title-section-info position-relative z-1">
+						<h2 class="section-title">OUR SERVICES</h2>
+					</div>
+				</div>
 				<div class="about-content">
 					<div class="container">
-						<div class="about-content-wrapper d-flex flex-wrap">
-							<h2 class="animation-text">Four Decades of Expertise</h2>
-							<div class="about-content-info">
-								<div class="animate-line">
-									<p>Georgia Mechanical has been enhancing spaces for nearly 40 years. We provide custom climate control solutions tailored to your operation's unique needs.</p>
+						<div class="row">
+							<div class="col-lg-6">
+								<h2 class="animation-text">Four Decades of Expertise</h2>
+							</div>
+							<div class="col-lg-6">
+								<div class="about-content-info">
+									<div class="animate-line">
+										<p>Georgia Mechanical has been enhancing spaces for nearly 40 years. We provide custom climate control solutions tailored to your operation's unique needs.</p>
+									</div>
+									<div class="animate-line">
+										<p>Our expertise goes beyond HVAC—we are your partners in creating thriving business environments and delivering “Excellence at Every Degree.”</p>
+									</div>
+									<a href="#" class="georgia-btn">
+										<span>VIEW LEADERSHIP</span>
+										<svg xmlns="http://www.w3.org/2000/svg" width="34" height="16" viewBox="0 0 34 16" fill="none">
+											<path d="M33.3614 8.73787C33.7519 8.34734 33.7519 7.71418 33.3614 7.32365L26.9974 0.959694C26.6069 0.56917 25.9738 0.56917 25.5832 0.959694C25.1927 1.35022 25.1927 1.98338 25.5832 2.37391L31.2401 8.03076L25.5832 13.6876C25.1927 14.0781 25.1927 14.7113 25.5832 15.1018C25.9738 15.4924 26.6069 15.4924 26.9974 15.1018L33.3614 8.73787ZM0.654297 9.03076L32.6543 9.03076V7.03076L0.654297 7.03076L0.654297 9.03076Z" fill="white"></path>
+										</svg>
+									</a>
 								</div>
-								<div class="animate-line">
-									<p>Our expertise goes beyond HVAC—we are your partners in creating thriving business environments and delivering “Excellence at Every Degree.”</p>
-								</div>
-								<a href="#" class="georgia-btn">
-									<span>VIEW LEADERSHIP</span>
-									<svg xmlns="http://www.w3.org/2000/svg" width="34" height="16" viewBox="0 0 34 16" fill="none">
-										<path d="M33.3614 8.73787C33.7519 8.34734 33.7519 7.71418 33.3614 7.32365L26.9974 0.959694C26.6069 0.56917 25.9738 0.56917 25.5832 0.959694C25.1927 1.35022 25.1927 1.98338 25.5832 2.37391L31.2401 8.03076L25.5832 13.6876C25.1927 14.0781 25.1927 14.7113 25.5832 15.1018C25.9738 15.4924 26.6069 15.4924 26.9974 15.1018L33.3614 8.73787ZM0.654297 9.03076L32.6543 9.03076V7.03076L0.654297 7.03076L0.654297 9.03076Z" fill="white"></path>
-									</svg>
-								</a>
 							</div>
 						</div>
 						<div class="about-img-wrapper">
 							<div class="content-block-img shpae-clip shpae-a-clip shpae-left-top shpae-right-bottom">
-								<img src="assets/images/about/about-img.jpg" alt="....">
+								<div class="trigger-parallax">
+									<img src="assets/images/about/about-img.jpg" alt="...." class="parallax-img">
+								</div>
 							</div>
 						</div>
 					</div>
@@ -232,8 +349,8 @@
 			<!-- about section end -->
 
 			<!-- cta section start -->
-			<section class="cta-area position-relative z-1">
-				<div class="cta-bg bg-fix" style="background-image: url('assets/images/cta/cta-bg.jpg');"></div>
+			<section class="cta-area position-relative z-1 trigger-parallax">
+				<div class="cta-bg bg-fix parallax-img" style="background-image: url('assets/images/cta/cta-bg.jpg');"></div>
 				<div class="container">
 					<div class="cta-content">
 						<div class="sub-title"><span>CAREERS</span></div>
@@ -262,56 +379,56 @@
 			<div class="top-footer-wrapper">
 				<div class="container">
 					<div class="row align-items-center">
-						<div class="col-lg-4">
+						<div class="col-lg-5">
 							<a href="#" class="footer-logo">
 								<img src="assets/images/logo/footer-logo.svg" alt="...">
 							</a>
 						</div>
-						<div class="col-lg-8">
+						<div class="col-lg-7">
 							<div class="main-footer-wrapper">
 								<div class="row">
-									<div class="col-lg-4">
+									<div class="col-sm-4 col-6">
 										<div class="footer-item">
 											<h6 class="animation-text">INDUSTRIES</h6>
 											<ul>
-												<li><a href="#">Education</a></li>
-												<li><a href="#">Retail</a></li>
-												<li><a href="#">Hospitality</a></li>
-												<li><a href="#">Cold Storage</a></li>
-												<li><a href="#">Foodservice</a></li>
-												<li><a href="#">Industrial</a></li>
-												<li><a href="#">Automotive Dealerships</a></li>
-												<li><a href="#">Financial Instituitons</a></li>
-												<li><a href="#">Disaster Relief/Response</a></li>
+												<li><a href="#" class="animation-text">Education</a></li>
+												<li><a href="#" class="animation-text">Retail</a></li>
+												<li><a href="#" class="animation-text">Hospitality</a></li>
+												<li><a href="#" class="animation-text">Cold Storage</a></li>
+												<li><a href="#" class="animation-text">Foodservice</a></li>
+												<li><a href="#" class="animation-text">Industrial</a></li>
+												<li><a href="#" class="animation-text">Automotive Dealerships</a></li>
+												<li><a href="#" class="animation-text">Financial Instituitons</a></li>
+												<li><a href="#" class="animation-text">Disaster Relief/Response</a></li>
 											</ul>
 										</div>
 									</div>
-									<div class="col-lg-4">
+									<div class="col-sm-4 col-6">
 										<div class="footer-item">
 											<h6 class="animation-text">SERVICES</h6>
 											<ul>
-												<li><a href="#">Commercial Service</a></li>
-												<li><a href="#">Construction</a></li>
+												<li><a href="#" class="animation-text">Commercial Service</a></li>
+												<li><a href="#" class="animation-text">Construction</a></li>
 											</ul>
 											<div class="footer-inner-item">
 												<ul>
-													<li><a href="#">careers</a></li>
-													<li><a href="#">ABOUT US</a></li>
+													<li><a href="#" class="animation-text">careers</a></li>
+													<li><a href="#" class="animation-text">ABOUT US</a></li>
 												</ul>
 											</div>
 										</div>
 									</div>
-									<div class="col-lg-4">
+									<div class="col-sm-4 col-6">
 										<div class="footer-item conact-item">
 											<h6 class="animation-text">contact</h6>
 											<address>
-												<a href="https://www.google.com/maps/place/4189+Capital+View+Dr,+Suwanee,+GA+30024,+USA/@34.064941,-84.0619703,108m/data=!3m1!1e3!4m6!3m5!1s0x88f597032fb6958f:0xe661b7442926ed22!8m2!3d34.0650992!4d-84.0622353!16s%2Fg%2F11dzqjdds_?entry=ttu&g_ep=EgoyMDI0MTExNy4wIKXMDSoASAFQAw%3D%3D">4189 Capital View Drive
+												<a href="https://www.google.com/maps/place/4189+Capital+View+Dr,+Suwanee,+GA+30024,+USA/@34.064941,-84.0619703,108m/data=!3m1!1e3!4m6!3m5!1s0x88f597032fb6958f:0xe661b7442926ed22!8m2!3d34.0650992!4d-84.0622353!16s%2Fg%2F11dzqjdds_?entry=ttu&g_ep=EgoyMDI0MTExNy4wIKXMDSoASAFQAw%3D%3D" class="animation-text">4189 Capital View Drive
 													Suwanee, GA  30024</a>
 											</address>
 											<ul>
-												<li><span>Main:</span><a href="tel:770-614-9214">770-614-9214</a></li>
-												<li><span>Service:</span><a href="tel:770-802-1123">770-802-1123</a></li>
-												<li><span>Fax:</span><a href="tel:770-614-4389">770-614-4389</a></li>
+												<li><span class="contact-title-info">Main:</span><a href="tel:770-614-9214">770-614-9214</a></li>
+												<li><span class="contact-title-info">Service:</span><a href="tel:770-802-1123">770-802-1123</a></li>
+												<li><span class="contact-title-info">Fax:</span><a href="tel:770-614-4389">770-614-4389</a></li>
 												
 											</ul>
 											<div class="socalis-link d-flex align-items-center">

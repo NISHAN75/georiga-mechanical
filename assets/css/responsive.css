@@ -5,15 +5,15 @@
 -----------------------------------
 */
 /* min-width 1430 */
-@media (min-width: 1430px) {
+@media (max-width: 1500px) {
+    /* footer section start */
+    .top-footer-wrapper::before {
+        left: calc(50% - 100px);
+    }
+    /* footer section end */
 }
 /* max-width 1399 */
 @media (max-width: 1399.98px) {
-    /* banner section start */
-    .banner-content h1 {
-        font-size: 80px;
-    }
-    /* banner section end */
 
     /* about section start */
     .about-img-wrapper .content-block-img.shpae-a-clip::after, .about-img-wrapper  .content-block-img.shpae-clip::before {
@@ -27,6 +27,15 @@
         width: calc(50% + 0px);
     }
     /* cta section end */
+
+    /* footer section start */
+    .top-footer-wrapper::before {
+        left: calc(50% - 50px);
+    }
+    .main-footer-wrapper {
+        padding-left: 70px;
+    }
+    /* footer section end */
 }
 /* max-width 1199 */
 @media (max-width: 1199.98px) { 
@@ -59,6 +68,12 @@
         margin-bottom: 50px;
     }
     /* cta section end */
+
+    /* footer section start */
+    .main-footer-wrapper {
+        padding-left: 70px;
+    }
+    /* footer section end */
     
 
 }
@@ -66,10 +81,10 @@
 @media (max-width: 991.98px) {
 
     /* heading style */
-    .map-area h2 ,
+    .map-area h3 ,
     .banner-content h1 ,
     h1 {
-        font-size: 50px;
+        font-size: 60px;
     }
     
     h2 {
@@ -151,13 +166,32 @@
     }
     /* cta section end */
 
+
+    /* footer section start */
+    .top-footer-wrapper::before {
+        display: none;
+    }
+    .main-footer-wrapper {
+        padding-left: 0px;
+    }
+    .top-footer-wrapper {
+        padding: 50px 0;
+    }
+    .footer-inner-item {
+        margin-top: 10px;
+    }
+    .footer-inner-item ul li {
+        margin-bottom: 10px;
+    }
+    /* footer section end */
+
    
 }
 /* max-width 767 */
 @media (max-width: 767.98px) { 
 
         /* heading style */
-        .map-area h2 ,
+        .map-area h3 ,
         .banner-content h1 ,
         h1 {
             font-size: 45px;
@@ -214,7 +248,7 @@
 /* max-width 575 */
 @media (max-width: 575.98px) {
         /* heading style */
-        .map-area h2 ,
+        .map-area h3 ,
         .banner-content h1 ,
         h1 {
             font-size: 40px;
