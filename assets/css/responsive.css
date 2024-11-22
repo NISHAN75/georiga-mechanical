@@ -16,7 +16,7 @@
 @media (max-width: 1399.98px) {
 
     /* about section start */
-    .about-img-wrapper .content-block-img.shpae-a-clip::after, .about-img-wrapper  .content-block-img.shpae-clip::before {
+    .about-img-wrapper .shape-a-clip::after, .about-img-wrapper  .shape-clip::before {
         height: 350px;
         width: 350px;
     }
@@ -44,13 +44,33 @@
         padding-right: 15px;
     }
 
+    /* offcanvas */
+    .offcanvas-header {
+        padding: 25px 40px 0;
+    }
+    .offcanvas-body {
+        padding: 50px 40px 60px 40px;
+    }
+    .offcanvas-footer{
+        padding: 0 40px;
+        padding-bottom: 50px;
+    }
+    .main-menu {
+        width: 430px;
+    }
+    .offcanvas::before {
+        width: 50vh;
+        height: 50vh;
+    }
+    /* offcanvas */
+
     /* content block section start */
     .content-block-item {
         margin-bottom: 80px;
     }
     /* content block section end */
     /* about section start */
-    .about-img-wrapper .content-block-img.shpae-a-clip::after, .about-img-wrapper  .content-block-img.shpae-clip::before {
+    .about-img-wrapper .shape-a-clip::after, .about-img-wrapper  .shape-clip::before {
         height: 300px;
         width: 300px;
     }
@@ -127,6 +147,21 @@
     }
     /* all padding */
 
+    /* modal section start */
+    .modal-wrapper-info {
+        padding: 0;
+    }
+    .modal-content-wrapper {
+        max-width: 100%;
+        padding:30px 20px;
+    }
+    /* modal section end */
+    /* header  */
+    .main-logo img {
+        max-width: 280px;
+    }
+    /* header  */
+
     /* content block section start */
     .content-block-item {
         margin-bottom: 50px;
@@ -136,7 +171,7 @@
     }
     /* content block section end */
     /* about section start */
-    .about-img-wrapper .content-block-img.shpae-a-clip::after, .about-img-wrapper  .content-block-img.shpae-clip::before {
+    .about-img-wrapper .shape-a-clip::after, .about-img-wrapper  .shape-clip::before {
         height: 250px;
         width: 250px;
     }
@@ -149,6 +184,7 @@
     /* about section end */
 
     /* cta section start */
+    .modal-bg ,
     .cta-bg {
         width: 100%;
         position: static;
@@ -165,6 +201,8 @@
         padding-right: 15px;
     }
     /* cta section end */
+
+
 
 
     /* footer section start */
@@ -213,6 +251,20 @@
             font-size: 22px;
         }
         /* heading style */
+
+
+        /* offcanvas  */
+        .offcanvas-header {
+            padding: 25px 20px 0;
+        }
+        .offcanvas-body {
+            padding: 40px 20px 40px 20px;
+        }
+        .offcanvas-footer {
+            padding: 0 20px;
+            padding-bottom: 30px;
+        }
+        /* offcanvas  */
         
         /* all padding */
         .about-area ,
@@ -232,7 +284,7 @@
         }
         /* banner section end */
         /* about section start */
-        .about-img-wrapper .content-block-img.shpae-a-clip::after, .about-img-wrapper  .content-block-img.shpae-clip::before {
+        .about-img-wrapper .shape-a-clip::after, .about-img-wrapper  .shape-clip::before {
             height:180px;
             width:180px;
         }
@@ -264,8 +316,14 @@
 
         /* heading style */
 
+        /* header section start */
+        .menu-toogle {
+            font-size: 18px;
+        }
+        /* header section end */
+
         /* content block section start */
-        .content-block-img.shpae-clip::before {
+        .shape-clip::before {
             height: 250px;
             width: 250px;
         }
@@ -275,27 +333,42 @@
 }
 /* max-width 479 */
 @media (max-width: 479.98px) {
+        /* header section start */
+        .main-logo img {
+            max-width: 180px;
+        }
+        /* header section end */
          /* content block section start */
-         .content-block-img.shpae-clip::before {
+        .shape-clip::before {
             height: 200px;
             width: 200px;
         }
-        .shpae-left-top {
+        .shape-left-top {
             padding-top: 12px;
             padding-left: 12px;
           }
-          .shpae-right-top{
+          .shape-right-top{
             padding-top: 12px;
             padding-right: 12px;
           }
-          .shpae-right-bottom{
+          .shape-right-bottom{
             padding-right: 12px;
             padding-bottom: 12px;
           }
         /* content block section end */
+
+
   
 }
 /* max-width 383 */
 @media (max-width: 383.98px) {
-  
+        /* header section start */
+        .main-logo img {
+            max-width: 150px;
+        }
+        .menu-toogle {
+            font-size: 16px;
+            gap: 10px;
+        }
+        /* header section end */
 }
