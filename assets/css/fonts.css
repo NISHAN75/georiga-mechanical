@@ -18,7 +18,7 @@ font-display: swap;
     font-display: swap;
 }
 @font-face {
-    font-family: 'Helvetica Neue';
+    font-family: "helvetica-neue-condensed";
     src: url('../fonts/HelveticaNeue-MediumCond.woff2') format('woff2'),
         url('../fonts/HelveticaNeue-MediumCond.woff') format('woff');
     font-weight: 500;

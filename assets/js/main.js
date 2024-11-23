@@ -1,13 +1,38 @@
 (function ($) {
     $(document).ready(function () {
-        // testing
-        $(window).on('resize load', function() {
-            var windowWidth = $(window).width();
-            var containerOffsetLeft = $('.container').offset().left;
-            var leftPosition = windowWidth - (containerOffsetLeft + 24);
-            $('.title-section-wrapper').css('right', leftPosition + 'px');
+        // OverlayScrollbars
+        const {
+            OverlayScrollbars,
+            ClickScrollPlugin
+        } = OverlayScrollbarsGlobal;
+        OverlayScrollbars.plugin(ClickScrollPlugin);
+        // Initialize OverlayScrollbars on the body element
+        $('body').each(function () {
+            OverlayScrollbars(this, {
+                scrollbars: {
+                    clickScroll: true,
+                },
+            });
         });
-        // testing
+        // title set
+        if ($(window).width() > 1499) {
+            $(window).on('resize load', function () {
+                const windowWidth = $(window).width();
+                const $container = $(".container").eq(3);
+                const containerOffsetLeft = $container.offset().left;
+                const leftPosition = windowWidth - (containerOffsetLeft + 24);
+                if ($(window).width() > 1699) {
+                    const fixPosition = leftPosition + 92;
+                    $('.title-section-wrapper').css('right', fixPosition + 'px');
+                } else if ($(window).width() < 1699) {
+                    const fixPosition = leftPosition + 30;
+                    $('.title-section-wrapper').css('right', fixPosition + 'px');
+                }
+            });
+        }
+
+
+        // title set
         let offcanvasElement = $(".header-offcanvas");
         offcanvasElement.on("show.bs.offcanvas", function () {
             $(".menu-icon").addClass("open");
@@ -74,18 +99,17 @@
         });
         // animation
 
-        //    main menu
+        // main menu
         const $mainMenu = $(".main-menu");
-        $mainMenu.find("> ul > li > a").on("click", function (event) {
+        $mainMenu.find(" ul > li > a").on("click", function (event) {
             const $menuItem = $(this).closest("li");
-
             if ($menuItem.hasClass("menu-link")) {
                 event.preventDefault();
             }
             $menuItem.addClass("active").siblings().removeClass("active");
         });
         // On hover over the main menu items
-        $mainMenu.find("> ul > li").hover(
+        $mainMenu.find("ul > li").hover(
             function () {
                 // Find the sub-menu
                 const $subMenu = $(this).find(".sub-menu");
@@ -105,7 +129,115 @@
                 }
             }
         );
-        //    main menu
+        // main menu
+
+
+        // offcanvas animation
+        // Trigger animation when the offcanvas is shown
+        gsap.set(".main-menu > ul", {
+            x: -100,
+            opacity: 0
+        });
+        gsap.set(".mobile-menu > ul", {
+            x: -100,
+            opacity: 0
+        });
+        gsap.set(".emergency-wrapper", {
+            x: -100,
+            opacity: 0
+        });
+        gsap.set(".contact-button-wrapper", {
+            x: -100,
+            opacity: 0
+        });
+        gsap.set(".social-link-wrapper", {
+            x: 100,
+            opacity: 0
+        });
+        // Animate on offcanvas show
+        $(".header-offcanvas").on('shown.bs.offcanvas', function () {
+            gsap.fromTo(
+                ".main-menu > ul", {
+                    x: -100,
+                    opacity: 0
+                }, {
+                    x: 0,
+                    opacity: 1,
+                    duration: 1,
+                    ease: 'power2.out'
+                }
+            );
+            gsap.fromTo(
+                ".mobile-menu > ul", {
+                    x: -100,
+                    opacity: 0
+                }, {
+                    x: 0,
+                    opacity: 1,
+                    duration: 1,
+                    ease: 'power2.out'
+                }
+            );
+            gsap.fromTo(
+                ".emergency-wrapper", {
+                    x: -100,
+                    opacity: 0
+                }, {
+                    x: 0,
+                    opacity: 1,
+                    duration: 1,
+                    delay: 0.3,
+                    ease: 'power2.out'
+                }
+            );
+            gsap.fromTo(
+                ".contact-button-wrapper", {
+                    x: -100,
+                    opacity: 0
+                }, {
+                    x: 0,
+                    opacity: 1,
+                    duration: 1,
+                    delay: 0.5,
+                    ease: 'power2.out'
+                }
+            );
+            gsap.fromTo(
+                ".social-link-wrapper", {
+                    x: 100,
+                    opacity: 0
+                }, {
+                    x: 0,
+                    opacity: 1,
+                    duration: 1,
+                    ease: 'power2.out'
+                }
+            );
+        });
+        $(".header-offcanvas").on('hidden.bs.offcanvas', function () {
+            gsap.set(".main-menu > ul", {
+                x: -100,
+                opacity: 0
+            });
+            gsap.set(".mobile-menu > ul", {
+                x: -100,
+                opacity: 0
+            });
+            gsap.set(".emergency-wrapper", {
+                x: -100,
+                opacity: 0
+            });
+            gsap.set(".contact-button-wrapper", {
+                x: -100,
+                opacity: 0
+            });
+            gsap.set(".social-link-wrapper", {
+                x: 100,
+                opacity: 0
+            });
+        });
+
+        // offcanvas animation
 
         // mobile menu
         const $mobileMenu = $(".mobile-menu");
@@ -134,19 +266,17 @@
         // mobile menu
 
 
-
-
         // sticky title
         $(".title-sticky").each(function () {
-            const $block = $(this); 
+            const $block = $(this);
             ScrollTrigger.create({
-              trigger: $block[0],
-              start: "top top",
-              end: "bottom 30%",
-              pin: $block.find(".section-title")[0],
-              pinSpacing: true
+                trigger: $block[0],
+                start: "top 20%",
+                end: "bottom 50%",
+                pin: $block.find(".section-title")[0],
+                pinSpacing: true
             });
-          });
+        });
         // sticky title
 
 
@@ -196,18 +326,14 @@
         //  paralax
 
 
-
-
-
         // modal
         const $myModal = $('#myModal');
         const $myInput = $('#myInput');
-        
+
         $myModal.on('shown.bs.modal', function () {
             $myInput.focus();
         });
         // modal
-
 
 
         // lenis
@@ -231,6 +357,8 @@
         // Disable lag smoothing in GSAP to prevent any delay in scroll animations
         gsap.ticker.lagSmoothing(0);
         // lenis
+
+
 
 
     });
