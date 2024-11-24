@@ -1,30 +1,66 @@
 (function ($) {
     $(document).ready(function () {
+        // header sticky
+        var windowOn = $(window);
+        windowOn.on('scroll', function () {
+            var scroll = windowOn.scrollTop();
+            if (scroll < 100) {
+                $(".header-area").removeClass("header-sticky");
+                $(".header-offcanvas").removeClass("version-2");
+            } else {
+                $(".header-area").addClass("header-sticky");
+                $(".header-offcanvas").addClass("version-2");
+            }
+        });
+
+
         // OverlayScrollbars
         const {
             OverlayScrollbars,
             ClickScrollPlugin
         } = OverlayScrollbarsGlobal;
+        // Initialize the ClickScrollPlugin
         OverlayScrollbars.plugin(ClickScrollPlugin);
-        // Initialize OverlayScrollbars on the body element
-        $('body').each(function () {
+        $("body").each(function () {
             OverlayScrollbars(this, {
                 scrollbars: {
-                    clickScroll: true,
+                    clickScroll: true, 
+                    autoHide: "leave", 
+                    dragScrolling: true, 
+                    clickScrolling: true,
                 },
+                scrollBehavior: 'smooth',
             });
         });
+        $(".modal-area").on("shown.bs.modal", function () {
+            OverlayScrollbars($(".modal-body"), {
+                className: "os-theme-custom",
+                scrollbars: {
+                    visibility: "auto", 
+                    autoHide: "leave",
+                    autoHideDelay: 500,
+                    dragScrolling: true,
+                    clickScrolling: true, 
+                },
+                scrollBehavior: 'smooth', 
+            });
+        });
+ 
+
+
+
+        // testing
         // title set
-        if ($(window).width() > 1499) {
-            $(window).on('resize load', function () {
-                const windowWidth = $(window).width();
-                const $container = $(".container").eq(3);
+        if (windowOn.width() > 1499) {
+            windowOn.on('resize load', function () {
+                const windowWidth = windowOn.width();
+                const $container = $(".container").eq(4);
                 const containerOffsetLeft = $container.offset().left;
                 const leftPosition = windowWidth - (containerOffsetLeft + 24);
-                if ($(window).width() > 1699) {
+                if (windowOn.width() > 1699) {
                     const fixPosition = leftPosition + 92;
                     $('.title-section-wrapper').css('right', fixPosition + 'px');
-                } else if ($(window).width() < 1699) {
+                } else if (windowOn.width() < 1699) {
                     const fixPosition = leftPosition + 30;
                     $('.title-section-wrapper').css('right', fixPosition + 'px');
                 }
@@ -271,18 +307,54 @@
             const $block = $(this);
             ScrollTrigger.create({
                 trigger: $block[0],
-                start: "top 20%",
-                end: "bottom 50%",
+                start: "top 30%",
+                end: "bottom 60%",
                 pin: $block.find(".section-title")[0],
                 pinSpacing: true
             });
         });
         // sticky title
 
+         // testimonial slider
+        let teamSlider = new Swiper(".featured-project-slider", {
+            slidesPerView: 2,
+            spaceBetween: 30,
+            keyboard: {
+            enabled: true,
+            },
+            pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            },
+            navigation: {
+            nextEl: ".tp-swiper-project-button-next",
+            prevEl: ".tp-swiper-project-button-prev",
+            },
+            // Responsive breakpoints
+            breakpoints: {
+            // when window width is >= 640px
+            0: {
+                slidesPerView: 1,
+            },
+            768: {
+                slidesPerView: 2,
+            },
+            // when window width is >= 992px
+            992: {
+                slidesPerView: 2,
+            },
+            // when window width is >= 1200px
+            1200: {
+                slidesPerView: 2,
+            }
+            }
+        });
+
+
 
         //paralax
-        $(window).on("load resize", function () {
-            if ($(window).width() > 991) {
+        windowOn.on("load resize", function () {
+            if (windowOn.width() > 991) {
                 const commitmentImg = $(".trigger-parallax");
                 if (commitmentImg.length) {
                     commitmentImg.each(function () {
@@ -357,8 +429,6 @@
         // Disable lag smoothing in GSAP to prevent any delay in scroll animations
         gsap.ticker.lagSmoothing(0);
         // lenis
-
-
 
 
     });
