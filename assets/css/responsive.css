@@ -93,6 +93,11 @@
 
     /* about section end */
 
+    /* single team section start */
+    .back-btn-wrapper {
+        margin-bottom: 20px;
+    }
+    /* single team section end */
 
     /* cta section start */
     .cta-area .cta-bg.parallax-img{
@@ -108,6 +113,8 @@
     }
 
     /* cta section end */
+
+
 
     /* footer section start */
     .footer-logo img {
@@ -180,6 +187,7 @@
     /* all button */
 
     /* all padding */
+    .single-team-area ,
     .about-area,
     .team-area ,
     .section-padding,
@@ -206,11 +214,26 @@
     /* w-100 */
     
     /* header  */
+    .header-offcanvas.version-2 .main-logo img ,
+    .header-sticky .main-logo img ,
     .main-logo img {
         max-width: 280px;
     }
-
+    .header-fix{
+        height: 150px;
+     }
+     .right-header-wrapper {
+        gap: 20px;
+    }
     /* header  */
+
+
+    /* banner section start */
+    .banner-area.about-banner-area {
+        min-height: 500px;
+        padding: 150px 0;
+    }
+    /* banner section end */
 
     /* content block section start */
     .content-block-item {
@@ -252,6 +275,46 @@
     }
     /* about section end */
 
+    /* single team section start */
+    .single-team-wrapper .col:nth-child(1),
+    .single-team-wrapper .col{
+        max-width: 100%;
+        flex-basis: 100%;
+    }
+    .single-team-information {
+        max-width: 100%;
+        padding-left: 0;
+    }
+    .team-member-info {
+        margin-bottom: 15px;
+    }
+    .team-member-content-info ,
+    .team-content-inner-info p {
+        margin-bottom: 15px;
+    }
+    .team-timeline-wrapper {
+        margin-top: 35px;
+    }
+    .single-team-wrapper {
+        margin-bottom: 40px;
+    }
+    .pagination-wrapper {
+        padding-top: 25px;
+    }
+    .pagination-btn {
+        font-size: 20px;
+        gap: 15px;
+    }
+    .svg-icon {
+        height: 40px;
+        width: 40px;
+    }
+    .svg-icon svg {
+        height: 15px;
+        width: 15px;
+    }
+    /* single team section end */
+
     /* cta section start */
     .modal-bg,
     .cta-area .cta-bg.parallax-img{
@@ -287,6 +350,9 @@
         margin-top: 35px;
     }
     /* team section end */
+
+
+
 
 
     /* footer section start */
@@ -345,11 +411,11 @@
 
 
     /* offcanvas */
-    .offcanvas-header {
+    .offcanvas-header ,
+    .header-offcanvas.version-2  .offcanvas-header {
         padding: 0;
-        padding-top: 47px;
+        padding-top: 48px;
     }
-
     .offcanvas-footer {
         padding: 0;
         padding-bottom: 50px;
@@ -358,6 +424,7 @@
     /* offcanvas */
 
     /* all padding */
+    .single-team-area ,
     .about-area,
     .team-area ,
     .section-padding,
@@ -370,13 +437,17 @@
     .header-wrapper {
         padding: 12px 0;
     }
-
+    .header-sticky .header-wrapper {
+        padding: 12px 0;
+    }
+    .header-fix {
+        height: 134px;
+    }
     /* header section end */
     /* banner section start */
     .banner-area {
         padding: 130px 0;
     }
-
     /* banner section end */
     /* about section start */
     .about-img-wrapper .shape-a-clip::after,
@@ -389,8 +460,24 @@
     .about-img-wrapper img {
         min-height: 300px;
     }
-
     /* about section end */
+
+
+    /* single team section start */
+    .timeline-title, .team-member-info  p {
+        font-size: 25px;
+    }
+    .team-timeline-wrapper {
+        padding: 20px;
+    }
+    .team-timeline-wrapper ul li {
+        line-height: 1.5;
+        margin-bottom: 12px;
+    }
+    .team-timeline-wrapper ul li:last-child{
+        margin-bottom: 0;
+    }
+    /* single team section end */
 
     /* footer section start */
     .other-links {
@@ -421,6 +508,12 @@
     }
 
     /* header section end */
+
+    .banner-area.about-banner-area {
+        min-height: 400px;
+        padding: 100px 0;
+    }
+    /* banner section end */
 
     /* content block section start */
     .shape-clip::before {
@@ -462,11 +555,24 @@
 
     /* section title */
     /* header section start */
+    .header-offcanvas.version-2 .main-logo img ,
+    .header-sticky .main-logo img ,
     .main-logo img {
         max-width: 180px;
     }
-
+    .header-fix {
+        height: 108px;
+    }
     /* header section end */
+
+
+    /* single team section start */
+    .single-team-img.shape-a-clip::after, .single-team-img.shape-clip::before {
+        height: 280px;
+        width: 280px;
+    }
+    /* single team section end */
+
     /* content block section start */
     .shape-clip::before {
         height: 200px;
@@ -497,10 +603,6 @@
 @media (max-width: 383.98px) {
 
     /* header section start */
-    .main-logo img {
-        max-width: 150px;
-    }
-
     .menu-toogle {
         font-size: 16px;
         gap: 10px;

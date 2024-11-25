@@ -116,7 +116,7 @@ img {
 
 /* z-index */
 
-.mp-p p:last-child {
+.mb-p p:last-child{
     margin-bottom: 0;
 }
 
@@ -233,6 +233,37 @@ h6 {
 .learn-btn:hover{
     color: #C1132A;
     text-decoration: none;
+}
+.learn-btn-2 {
+    color: #FFF;
+    font-size: 18px;
+    line-height: 1.2;
+    text-decoration: underline;
+    transition: all 0.3s ease-in-out;
+}
+.learn-btn-2:hover{
+    color: #000000;
+    text-decoration: none;
+}
+.back-btn {
+    color: #C1132A;
+    font-family: "Chivo Mono", monospace;
+    font-size: 20px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease-in-out;
+}
+.back-btn svg path{
+    transition: all 0.3s ease-in-out;
+}
+.back-btn:hover{
+    color: #000000;
+}
+.back-btn:hover svg path{
+    fill:#000000;
 }
 /* all button */
 
@@ -355,7 +386,8 @@ h6 {
 .main-menu {
     width: 470px;
 }
-
+.footer-item ul ,
+.team-timeline-wrapper ul ,
 .mobile-menu ul,
 .main-menu ul {
     list-style: none;
@@ -824,6 +856,10 @@ h6 {
     min-height: 100vh;
     padding: 247px 0 200px;
 }
+.banner-area.about-banner-area {
+    min-height: 757px;
+    padding: 221px 0 200px;
+}
 .banner-area .container {
     max-width: 1334px;
 }
@@ -931,6 +967,10 @@ h6 {
     color: #fff;
     opacity: 0.8;
 }
+.header-fix{
+   height: 155px;
+   width: 100%;
+}
 
 /* banner section end */
 
@@ -1012,8 +1052,8 @@ h6 {
     z-index: -1;
 }
 
-.red-verion.shape-a-clip::after,
-.red-verion.shape-clip::before {
+.red-version.shape-a-clip::after,
+.red-version.shape-clip::before {
     background-color: #C1132A;
 }
 
@@ -1307,6 +1347,23 @@ h6 {
     --bs-gutter-x: 35px;
     --bs-gutter-y: 87px;
 }
+.red-hover {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: transparent;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+.red-hover-div:hover .red-hover{
+    background: rgba(193, 19, 42, 0.65);
+    opacity: 1;
+    visibility: visible;
+}
+
 /* team section end */
 
 
@@ -1342,11 +1399,7 @@ h6 {
     max-width: 1578px;
 }
 
-.footer-item ul {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-}
+
 
 .footer-item ul li a {
     color: #fff;
@@ -1555,3 +1608,133 @@ h6 {
 }
 
 /* featured project section end */
+
+
+/* single team section start */
+.team-member-info h2{
+    margin-bottom: 4px;
+}
+.timeline-title ,
+.team-member-info  p{
+    color: #C1132A;
+    font-family: "helvetica-neue-condensed", sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 0;
+}
+.team-member-info {
+    margin-bottom: 30px;
+}
+.team-content-title {
+    color: #C1132A;
+    font-family: "Helvetica", sans-serif;
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-bottom: 3px;
+}
+.team-content-inner-info p {
+    margin-bottom: 27px;
+}
+.team-member-content-info {
+    margin-bottom: 30px;
+}
+.team-member-content-info:last-child{
+    margin-bottom: 0;
+}
+.team-timeline-wrapper {
+    margin-top: 55px;
+    background: rgba(240, 240, 240, 0.60);
+    padding: 29px 38px 25px 38px;
+    max-width: 738px;
+}
+.team-timeline-wrapper .timeline-title{
+    margin-bottom: 19px;
+}
+.team-timeline-wrapper ul li{
+    color: #000;
+    font-size: 19px;
+    line-height: 2.20;
+}
+.team-timeline-wrapper ul li span{
+    color: #C1132A;
+}
+.single-team-area .container{
+    max-width: 1308px;
+}
+.single-team-area .container .row {
+    --bs-gutter-x: 0;
+    --bs-gutter-y: 35px;
+}
+.single-team-img.shape-left-top {
+    padding-top: 10px;
+    padding-left: 10px;
+}
+.single-team-img.shape-a-clip::after, 
+.single-team-img.shape-clip::before {
+    height: 328px;
+    width: 333px;
+}
+.single-team-area {
+    padding: 67px 0 108px;
+}
+.back-btn-wrapper{
+    margin-bottom: 61px;
+}
+.single-team-wrapper .col:nth-child(1) {
+    max-width: 442px;
+}
+
+.single-team-information {
+    max-width: 823px;
+    padding-left: 66px;
+}
+.pagination-area .container{
+    max-width: 1272px;
+}
+.pagination-wrapper {
+    border-top: 2px solid rgba(0, 0, 0, 0.30);
+    padding-top: 44px;
+}
+.single-team-wrapper {
+    margin-bottom: 91px;
+}
+.pagination-btn {
+    border: 0;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    color: #000;
+    font-family: "helvetica-neue-condensed", sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.2;
+    transition: all 0.3s ease-in-out;
+}
+.svg-icon {
+    height: 67px;
+    width: 67px;
+    border-radius: 6px;
+    border: 1px solid #C1132A;
+    background: #C1132A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+}
+.pagination-btn .svg-icon svg path{
+    transition: all 0.3s ease-in-out;
+}
+.pagination-btn:hover{
+    color: #C1132A;
+}
+.pagination-btn:hover .svg-icon{
+    border-color: #000;
+    background: transparent;
+}
+.pagination-btn:hover .svg-icon svg path{
+    fill: #C1132A;
+}
+/* single team section end */

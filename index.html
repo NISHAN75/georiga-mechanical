@@ -7,6 +7,8 @@
         <link rel="stylesheet" href="assets/css/bootstrap.min.css">
         <!-- fonts min css -->
         <link rel="stylesheet" href="assets/css/fonts.css">
+        <!-- swiper bundle min css -->
+        <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
         <!-- overlay scrollbars css -->
         <link rel="stylesheet" href="assets/css/overlayscrollbars.min.css">
         <!-- style css -->
@@ -15,7 +17,7 @@
         <link rel="stylesheet" href="assets/css/responsive.css">
         <title>Georgia Mechanical</title>
     </head>
-    <body data-overlayscrollbars-initialize>
+    <body data-overlayscrollbars-initialize class="home">
         <!-- offcanvs section start -->
         <div class="header-offcanvas offcanvas offcanvas-end" data-lenis-prevent tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
             <div class="container h-100">
@@ -156,7 +158,7 @@
                     </span>
                     </button>
                     <div class="modal-body">
-                        <div class="modal-wrapper shape-clip red-verion shape-a-clip shape-left-top shape-right-bottom">
+                        <div class="modal-wrapper shape-clip red-version shape-a-clip shape-left-top shape-right-bottom">
                             <div class="modal-wrapper-info">
                                 <div class="modal-bg bg-fix" style="background-image: url('assets/images/modal/modal-bg.jpg');"></div>
                                 <div class="modal-content-wrapper">
@@ -209,7 +211,9 @@
                 <div class="container">
                     <div class="banner-content position-relative z-4 text-center">
                         <h1 class="animation-text">Commercial HVAC and<br> Refrigeration Done Right</h1>
-                        <a href="#" class="georgia-btn border-0 long-btn">BUILDING Excellence at Every Degree.</a>
+                        <div class="animation-line">
+                            <a href="#" class="georgia-btn border-0 long-btn">BUILDING Excellence at Every Degree.</a>
+                        </div>
                     </div>
                 </div>
                 <a href="#" class="scroll-btn">
@@ -243,15 +247,17 @@
                             <div class="col-lg-6">
                                 <div class="content-block-wrapper">
                                     <h2 class="animation-text">Commercial Service</h2>
-                                    <div class="animate-line">
+                                    <div class="animation-line">
                                         <p>We specialize in transforming commercial spaces into havens of comfort, efficiency, and productivity. For nearly four decades, our mission has centered on delivering tailor-made climate solutions to fulfill the distinctive needs of every business.</p>
                                     </div>
-                                    <a href="#" class="georgia-btn">
-                                        <span>LEARN MORE</span>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="34" height="16" viewBox="0 0 34 16" fill="none">
-                                            <path d="M33.3614 8.73787C33.7519 8.34734 33.7519 7.71418 33.3614 7.32365L26.9974 0.959694C26.6069 0.56917 25.9738 0.56917 25.5832 0.959694C25.1927 1.35022 25.1927 1.98338 25.5832 2.37391L31.2401 8.03076L25.5832 13.6876C25.1927 14.0781 25.1927 14.7113 25.5832 15.1018C25.9738 15.4924 26.6069 15.4924 26.9974 15.1018L33.3614 8.73787ZM0.654297 9.03076L32.6543 9.03076V7.03076L0.654297 7.03076L0.654297 9.03076Z" fill="white"/>
-                                        </svg>
-                                    </a>
+                                    <div class="animation-line">
+                                        <a href="#" class="georgia-btn">
+                                            <span>LEARN MORE</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="34" height="16" viewBox="0 0 34 16" fill="none">
+                                                <path d="M33.3614 8.73787C33.7519 8.34734 33.7519 7.71418 33.3614 7.32365L26.9974 0.959694C26.6069 0.56917 25.9738 0.56917 25.5832 0.959694C25.1927 1.35022 25.1927 1.98338 25.5832 2.37391L31.2401 8.03076L25.5832 13.6876C25.1927 14.0781 25.1927 14.7113 25.5832 15.1018C25.9738 15.4924 26.6069 15.4924 26.9974 15.1018L33.3614 8.73787ZM0.654297 9.03076L32.6543 9.03076V7.03076L0.654297 7.03076L0.654297 9.03076Z" fill="white"/>
+                                            </svg>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -268,15 +274,17 @@
                             <div class="col-lg-6">
                                 <div class="content-block-wrapper">
                                     <h2 class="animation-text">Construction</h2>
-                                    <div class="animate-line">
+                                    <div class="animation-line">
                                         <p>We specialize in transforming commercial spaces into havens of comfort, efficiency, and productivity. For nearly four decades, our mission has centered on delivering tailor-made climate solutions to fulfill the distinctive needs of every business.</p>
                                     </div>
-                                    <a href="#" class="georgia-btn">
-                                        <span>LEARN MORE</span>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="34" height="16" viewBox="0 0 34 16" fill="none">
-                                            <path d="M33.3614 8.73787C33.7519 8.34734 33.7519 7.71418 33.3614 7.32365L26.9974 0.959694C26.6069 0.56917 25.9738 0.56917 25.5832 0.959694C25.1927 1.35022 25.1927 1.98338 25.5832 2.37391L31.2401 8.03076L25.5832 13.6876C25.1927 14.0781 25.1927 14.7113 25.5832 15.1018C25.9738 15.4924 26.6069 15.4924 26.9974 15.1018L33.3614 8.73787ZM0.654297 9.03076L32.6543 9.03076V7.03076L0.654297 7.03076L0.654297 9.03076Z" fill="white"/>
-                                        </svg>
-                                    </a>
+                                    <div class="animation-line">
+                                        <a href="#" class="georgia-btn">
+                                            <span>LEARN MORE</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="34" height="16" viewBox="0 0 34 16" fill="none">
+                                                <path d="M33.3614 8.73787C33.7519 8.34734 33.7519 7.71418 33.3614 7.32365L26.9974 0.959694C26.6069 0.56917 25.9738 0.56917 25.5832 0.959694C25.1927 1.35022 25.1927 1.98338 25.5832 2.37391L31.2401 8.03076L25.5832 13.6876C25.1927 14.0781 25.1927 14.7113 25.5832 15.1018C25.9738 15.4924 26.6069 15.4924 26.9974 15.1018L33.3614 8.73787ZM0.654297 9.03076L32.6543 9.03076V7.03076L0.654297 7.03076L0.654297 9.03076Z" fill="white"/>
+                                            </svg>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -296,49 +304,49 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-3 col-md-6">
-                            <a href="#" class="industries-card position-relative z-1 d-block overflow-hidden">
+                            <a href="#" class="industries-card position-relative z-1 d-block overflow-hidden animation-line">
                                 <img src="assets/images/Industry/Industry-01.jpg" alt="..">
                                 <h4 class=" industries-title animation-text">Education</h4>
                             </a>
                         </div>
                         <div class="col-lg-3 col-md-6">
-                            <a href="#" class="industries-card position-relative z-1 d-block overflow-hidden">
+                            <a href="#" class="industries-card position-relative z-1 d-block overflow-hidden animation-line">
                                 <img src="assets/images/Industry/Industry-01.jpg" alt="..">
                                 <h4 class=" industries-title animation-text">Cold Storage</h4>
                             </a>
                         </div>
                         <div class="col-lg-3 col-md-6">
-                            <a href="#" class="industries-card position-relative z-1 d-block overflow-hidden">
+                            <a href="#" class="industries-card position-relative z-1 d-block overflow-hidden animation-line">
                                 <img src="assets/images/Industry/Industry-01.jpg" alt="..">
                                 <h4 class=" industries-title animation-text">Retail</h4>
                             </a>
                         </div>
                         <div class="col-lg-3 col-md-6">
-                            <a href="#" class="industries-card position-relative z-1 d-block overflow-hidden">
+                            <a href="#" class="industries-card position-relative z-1 d-block overflow-hidden animation-line">
                                 <img src="assets/images/Industry/Industry-01.jpg" alt="..">
                                 <h4 class=" industries-title animation-text">Healthcare</h4>
                             </a>
                         </div>
                         <div class="col-lg-3 col-md-6">
-                            <a href="#" class="industries-card position-relative z-1 d-block overflow-hidden">
+                            <a href="#" class="industries-card position-relative z-1 d-block overflow-hidden animation-line">
                                 <img src="assets/images/Industry/Industry-01.jpg" alt="..">
                                 <h4 class=" industries-title animation-text">Industrial</h4>
                             </a>
                         </div>
                         <div class="col-lg-3 col-md-6">
-                            <a href="#" class="industries-card position-relative z-1 d-block overflow-hidden">
+                            <a href="#" class="industries-card position-relative z-1 d-block overflow-hidden animation-line">
                                 <img src="assets/images/Industry/Industry-01.jpg" alt="..">
                                 <h4 class=" industries-title animation-text">Food Service</h4>
                             </a>
                         </div>
                         <div class="col-lg-3 col-md-6">
-                            <a href="#" class="industries-card position-relative z-1 d-block overflow-hidden">
+                            <a href="#" class="industries-card position-relative z-1 d-block overflow-hidden animation-line">
                                 <img src="assets/images/Industry/Industry-01.jpg" alt="..">
                                 <h4 class=" industries-title animation-text">Hospitality</h4>
                             </a>
                         </div>
                         <div class="col-lg-3 col-md-6">
-                            <a href="#" class="industries-card position-relative z-1 d-block overflow-hidden">
+                            <a href="#" class="industries-card position-relative z-1 d-block overflow-hidden animation-line">
                                 <img src="assets/images/Industry/Industry-01.jpg" alt="..">
                                 <h4 class=" industries-title animation-text">Financial
                                     Institutions
@@ -346,13 +354,13 @@
                             </a>
                         </div>
                         <div class="col-lg-3 col-md-6">
-                            <a href="#" class="industries-card position-relative z-1 d-block overflow-hidden">
+                            <a href="#" class="industries-card position-relative z-1 d-block overflow-hidden animation-line">
                                 <img src="assets/images/Industry/Industry-01.jpg" alt="..">
                                 <h4 class=" industries-title animation-text">Automotive Dealerships</h4>
                             </a>
                         </div>
                         <div class="col-lg-3 col-md-6">
-                            <a href="#" class="industries-card position-relative z-1 d-block overflow-hidden">
+                            <a href="#" class="industries-card position-relative z-1 d-block overflow-hidden animation-line">
                                 <img src="assets/images/Industry/Industry-01.jpg" alt="..">
                                 <h4 class=" industries-title animation-text">Disaster
                                     Relief
@@ -394,19 +402,21 @@
                                 <h2 class="animation-text">Four Decades of Expertise</h2>
                             </div>
                             <div class="col-lg-6">
-                                <div class="about-content-info">
-                                    <div class="animate-line">
+                                <div class="about-content-info ">
+                                    <div class="animation-line">
                                         <p>Georgia Mechanical has been enhancing spaces for nearly 40 years. We provide custom climate control solutions tailored to your operation's unique needs.</p>
                                     </div>
-                                    <div class="animate-line">
+                                    <div class="animation-line">
                                         <p>Our expertise goes beyond HVAC—we are your partners in creating thriving business environments and delivering “Excellence at Every Degree.”</p>
                                     </div>
-                                    <a href="#" class="georgia-btn">
-                                        <span>VIEW LEADERSHIP</span>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="34" height="16" viewBox="0 0 34 16" fill="none">
-                                            <path d="M33.3614 8.73787C33.7519 8.34734 33.7519 7.71418 33.3614 7.32365L26.9974 0.959694C26.6069 0.56917 25.9738 0.56917 25.5832 0.959694C25.1927 1.35022 25.1927 1.98338 25.5832 2.37391L31.2401 8.03076L25.5832 13.6876C25.1927 14.0781 25.1927 14.7113 25.5832 15.1018C25.9738 15.4924 26.6069 15.4924 26.9974 15.1018L33.3614 8.73787ZM0.654297 9.03076L32.6543 9.03076V7.03076L0.654297 7.03076L0.654297 9.03076Z" fill="white"></path>
-                                        </svg>
-                                    </a>
+                                    <div class="animation-line">
+                                        <a href="#" class="georgia-btn">
+                                            <span>VIEW LEADERSHIP</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="34" height="16" viewBox="0 0 34 16" fill="none">
+                                                <path d="M33.3614 8.73787C33.7519 8.34734 33.7519 7.71418 33.3614 7.32365L26.9974 0.959694C26.6069 0.56917 25.9738 0.56917 25.5832 0.959694C25.1927 1.35022 25.1927 1.98338 25.5832 2.37391L31.2401 8.03076L25.5832 13.6876C25.1927 14.0781 25.1927 14.7113 25.5832 15.1018C25.9738 15.4924 26.6069 15.4924 26.9974 15.1018L33.3614 8.73787ZM0.654297 9.03076L32.6543 9.03076V7.03076L0.654297 7.03076L0.654297 9.03076Z" fill="white"></path>
+                                            </svg>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -431,16 +441,18 @@
                     <div class="cta-content">
                         <div class="sub-title"><span>CAREERS</span></div>
                         <h2 class="animation-text">Join Our Team</h2>
-                        <div class="animate-line">
+                        <div class="animation-line">
                             <p>Discover a career where innovation meets tradition, and your growth and development are as important as the excellent results we deliver. Apply now and build not just HVACR systems but a legacy of excellence.</p>
                         </div>
-                        <a href="#" class="georgia-btn transparent-btn">
-                            <span>view details</span>
-                            <span class="transparent-btn-border"></span>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="34" height="16" viewBox="0 0 34 16" fill="none">
-                                <path d="M33.3614 8.73787C33.7519 8.34734 33.7519 7.71418 33.3614 7.32365L26.9974 0.959694C26.6069 0.56917 25.9738 0.56917 25.5832 0.959694C25.1927 1.35022 25.1927 1.98338 25.5832 2.37391L31.2401 8.03076L25.5832 13.6876C25.1927 14.0781 25.1927 14.7113 25.5832 15.1018C25.9738 15.4924 26.6069 15.4924 26.9974 15.1018L33.3614 8.73787ZM0.654297 9.03076L32.6543 9.03076V7.03076L0.654297 7.03076L0.654297 9.03076Z" fill="white"></path>
-                            </svg>
-                        </a>
+                        <div class="animation-line">
+                            <a href="#" class="georgia-btn transparent-btn">
+                                <span>view details</span>
+                                <span class="transparent-btn-border"></span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="34" height="16" viewBox="0 0 34 16" fill="none">
+                                    <path d="M33.3614 8.73787C33.7519 8.34734 33.7519 7.71418 33.3614 7.32365L26.9974 0.959694C26.6069 0.56917 25.9738 0.56917 25.5832 0.959694C25.1927 1.35022 25.1927 1.98338 25.5832 2.37391L31.2401 8.03076L25.5832 13.6876C25.1927 14.0781 25.1927 14.7113 25.5832 15.1018C25.9738 15.4924 26.6069 15.4924 26.9974 15.1018L33.3614 8.73787ZM0.654297 9.03076L32.6543 9.03076V7.03076L0.654297 7.03076L0.654297 9.03076Z" fill="white"></path>
+                                </svg>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -546,6 +558,8 @@
         <script src="assets/js/jquery.min.js"></script>
         <!-- bootstrap min js -->
         <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <!-- swiper bundle min js -->
+        <script src="assets/js/swiper-bundle.min.js"></script>
         <!-- scrollTrigger min js -->
         <script src="assets/js/scrollTrigger.min.js"></script>
         <!-- gsap split min js -->

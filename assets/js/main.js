@@ -1,37 +1,22 @@
 (function ($) {
     $(document).ready(function () {
+        
         // header sticky
         var windowOn = $(window);
         windowOn.on('scroll', function () {
-            var scroll = windowOn.scrollTop();
-            if (scroll < 100) {
-                $(".header-area").removeClass("header-sticky");
-                $(".header-offcanvas").removeClass("version-2");
-            } else {
-                $(".header-area").addClass("header-sticky");
-                $(".header-offcanvas").addClass("version-2");
+            if($("body").hasClass("home")){
+                var scroll = windowOn.scrollTop();
+                if (scroll < 100) {
+                    $(".header-area").removeClass("header-sticky");
+                    $(".header-offcanvas").removeClass("version-2");
+                } else {
+                    $(".header-area").addClass("header-sticky");
+                    $(".header-offcanvas").addClass("version-2");
+                }
             }
         });
 
 
-        // OverlayScrollbars
-        const {
-            OverlayScrollbars,
-            ClickScrollPlugin
-        } = OverlayScrollbarsGlobal;
-        // Initialize the ClickScrollPlugin
-        OverlayScrollbars.plugin(ClickScrollPlugin);
-        $("body").each(function () {
-            OverlayScrollbars(this, {
-                scrollbars: {
-                    clickScroll: true, 
-                    autoHide: "leave", 
-                    dragScrolling: true, 
-                    clickScrolling: true,
-                },
-                scrollBehavior: 'smooth',
-            });
-        });
         $(".modal-area").on("shown.bs.modal", function () {
             OverlayScrollbars($(".modal-body"), {
                 className: "os-theme-custom",
@@ -119,20 +104,28 @@
                 ease: "power3.inOut"
             });
         });
-        $(".animate-line p").each(function (index, element) {
-            gsap.from(element, {
-                duration: 0.9,
-                opacity: 0,
-                y: 50,
+        // animation line
+        gsap.utils.toArray(".animation-line").forEach((element) => {
+            gsap.fromTo(
+              element,
+              {
+                y: 100, 
+                opacity: 0, 
+              },
+              {
+                y: 0,
+                opacity: 1,
+                duration: 1.5, 
+                ease: "power2.out", 
                 scrollTrigger: {
-                    trigger: element,
-                    start: "top bottom",
-                    end: "bottom top",
-                    scrub: !1,
-                    toggleActions: "play none none reverse"
-                }
-            });
-        });
+                  trigger: element, 
+                  start: "top 90%",
+                  toggleActions: "play none none reverse",
+
+                },
+              }
+            );
+          });
         // animation
 
         // main menu
@@ -407,7 +400,24 @@
         });
         // modal
 
-
+        // OverlayScrollbars
+        const {
+            OverlayScrollbars,
+            ClickScrollPlugin
+        } = OverlayScrollbarsGlobal;
+        // Initialize the ClickScrollPlugin
+        OverlayScrollbars.plugin(ClickScrollPlugin);
+        $("body").each(function () {
+            OverlayScrollbars(this, {
+                scrollbars: {
+                    clickScroll: true, 
+                    autoHide: "leave", 
+                    dragScrolling: true, 
+                    clickScrolling: true,
+                },
+                scrollBehavior: 'smooth',
+            });
+        });
         // lenis
         // Initialize a new Lenis instance for smooth scrolling
         const lenis = new Lenis();

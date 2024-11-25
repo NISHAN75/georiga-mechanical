@@ -9,6 +9,8 @@
         <link rel="stylesheet" href="assets/css/fonts.css">
         <!-- overlay scrollbars css -->
         <link rel="stylesheet" href="assets/css/overlayscrollbars.min.css">
+        <!-- swiper bundle min css -->
+        <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
         <!-- style css -->
         <link rel="stylesheet" href="assets/css/main.css">
         <!-- responsive css -->
@@ -17,7 +19,7 @@
     </head>
     <body data-overlayscrollbars-initialize>
         <!-- offcanvs section start -->
-        <div class="header-offcanvas offcanvas offcanvas-end" data-lenis-prevent tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="header-offcanvas offcanvas offcanvas-end version-2" data-lenis-prevent tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
             <div class="container h-100">
                 <div class="offcanvas-header justify-content-between">
                     <a href="#" class="main-logo">
@@ -145,7 +147,7 @@
         </div>
         <!-- offcanvs section end -->
         <!-- services modal section start -->
-        <div class="modal-area modal fade" id="serviceModal" tabindex="-1" aria-labelledby="serviceModalLabel" aria-hidden="true" data-lenis-prevent>
+        <div data-overlayscrollbars-initialize class="modal-area modal fade" id="serviceModal" tabindex="-1" aria-labelledby="serviceModalLabel" aria-hidden="true" data-lenis-prevent>
             <div class="modal-dialog">
                 <div class="modal-content">
                     <button type="button" class="menu-toogle black-version d-flex align-items-end" data-bs-dismiss="modal" aria-label="Close">
@@ -156,7 +158,7 @@
                     </span>
                     </button>
                     <div class="modal-body">
-                        <div class="modal-wrapper shape-clip red-verion shape-a-clip shape-left-top shape-right-bottom">
+                        <div class="modal-wrapper shape-clip red-version shape-a-clip shape-left-top shape-right-bottom">
                             <div class="modal-wrapper-info">
                                 <div class="modal-bg bg-fix" style="background-image: url('assets/images/modal/modal-bg.jpg');"></div>
                                 <div class="modal-content-wrapper">
@@ -172,7 +174,7 @@
         </div>
         <!-- services modal section end -->
         <!-- header section start -->
-        <header class="header-area">
+        <header class="header-area header-sticky">
             <div class="top-header-caption text-center bg-lipstick-red mb-p">
                 <p>24/7 Emergency Services - <a href="#serviceModal" data-bs-toggle="modal">Learn More</a></p>
             </div>
@@ -204,15 +206,16 @@
         <!-- header section end -->
         <!-- main section start -->
         <main>
+            <div class="header-fix"></div>
             <!-- banner section start -->
-            <div class="banner-area position-relative z-1 d-flex align-items-center">
+            <div class="banner-area about-banner-area position-relative z-1 d-flex align-items-start">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-8">
                             <div class="banner-content banner-about-content inner-page-content position-relative z-4">
                                 <a href="#" class="georgia-btn sub-title-btn border-0">ABOUT US</a>
                                 <h1 class="animation-text">HVACR Expertise</h1>
-                                <div class="animate-line"">
+                                <div class="animation-line"">
                                     <p>Our team is the heart of our company, bringing a wealth of experience and passion to every project. From friendly customer service representatives to skilled installers and meticulous maintenance crews, our people work together to ensure your comfort and satisfaction.</p>
                                 </div>
                             </div>
@@ -228,7 +231,7 @@
                     <div class="content-block-item ">
                         <div class="row align-items-center">
                             <div class="col-lg-6">
-                                <div class="content-block-img shape-clip shape-left-top">
+                                <div class="content-block-img shape-clip shape-left-top animation-line">
                                     <div class="trigger-parallax">
                                         <img src="assets/images/content-block/content-block-01.jpg" alt="...." class="parallax-img">
                                     </div>
@@ -237,7 +240,7 @@
                             <div class="col-lg-6">
                                 <div class="content-block-wrapper">
                                     <h2 class="animation-text">The People Behind <br>The Comfort</h2>
-                                    <div class="animate-line">
+                                    <div class="animation-line">
                                         <p>Our HVACR company is more than tools and technology—it's a team of dedicated individuals passionate about creating comfortable environments. We prioritize ongoing training and professional growth, cultivating a workforce that's not only skilled but also genuinely cares about the comfort and well-being of our clients.</p>
                                     </div>
                                 </div>
@@ -254,97 +257,57 @@
             <section class="team-area bg-seashell">
                 <div class="container">
                     <div class="section-heading text-center">
-                        <h2 class="mb-0">Meet The Team</h2>
+                        <h2 class="mb-0 animation-text">Meet The Team</h2>
                     </div>
                     <div class="team-member-wrapper">
                         <div class="row">
                             <div class="col-lg-4 col-sm-6">
-                                <a href="#" class="team-item overflow-hidden d-block">
-                                    <img src="assets/images/team/team-img-01.jpg" alt="...">
-                                    <div class="team-info text-center">
-                                        <h4 class="animation-text">John Doe</h4>
-                                        <div class="animate-line">
-                                            <p>Job Title & Description</p>
+                                <div class="team-item overflow-hidden animation-line">
+                                    <div class="team-img-wrapper  red-hover-div position-relative z-1">
+                                        <img src="assets/images/team/team-img-01.jpg" alt="...">
+                                        <div class="red-hover d-flex align-items-center justify-content-center">
+                                            <a href="single-team.html" class="learn-btn-2">Learn More</a>
                                         </div>
                                     </div>
-                                </a>
+                                    <div class="team-info text-center">
+                                        <h4 class="animation-text">Sean Reach</h4>
+                                        <div class="animation-line">
+                                            <p>CFO</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="col-lg-4 col-sm-6">
-                                <a href="#" class="team-item overflow-hidden d-block">
-                                    <img src="assets/images/team/team-img-01.jpg" alt="...">
-                                    <div class="team-info text-center">
-                                        <h4 class="animation-text">John Doe</h4>
-                                        <div class="animate-line">
-                                            <p>Job Title & Description</p>
+                                <div class="team-item overflow-hidden animation-line">
+                                    <div class="team-img-wrapper  red-hover-div position-relative z-1">
+                                        <img src="assets/images/team/team-img-01.jpg" alt="...">
+                                        <div class="red-hover d-flex align-items-center justify-content-center">
+                                            <a href="single-team.html" class="learn-btn-2">Learn More</a>
                                         </div>
                                     </div>
-                                </a>
+                                    <div class="team-info text-center">
+                                        <h4 class="animation-text">Tommy Sanders</h4>
+                                        <div class="animation-line">
+                                            <p>COO</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="col-lg-4 col-sm-6">
-                                <a href="#" class="team-item overflow-hidden d-block">
-                                    <img src="assets/images/team/team-img-01.jpg" alt="...">
-                                    <div class="team-info text-center">
-                                        <h4 class="animation-text">John Doe</h4>
-                                        <div class="animate-line">
-                                            <p>Job Title & Description</p>
+                                <div class="team-item overflow-hidden animation-line">
+                                    <div class="team-img-wrapper  red-hover-div position-relative z-1">
+                                        <img src="assets/images/team/team-img-01.jpg" alt="...">
+                                        <div class="red-hover d-flex align-items-center justify-content-center">
+                                            <a href="single-team.html" class="learn-btn-2">Learn More</a>
                                         </div>
                                     </div>
-                                </a>
-                            </div>
-                            <div class="col-lg-4 col-sm-6">
-                                <a href="#" class="team-item overflow-hidden d-block">
-                                    <img src="assets/images/team/team-img-01.jpg" alt="...">
                                     <div class="team-info text-center">
-                                        <h4 class="animation-text">John Doe</h4>
-                                        <div class="animate-line">
-                                            <p>Job Title & Description</p>
+                                        <h4 class="animation-text">Doug Peppers</h4>
+                                        <div class="animation-line">
+                                            <p>CEO/President</p>
                                         </div>
                                     </div>
-                                </a>
-                            </div>
-                            <div class="col-lg-4 col-sm-6">
-                                <a href="#" class="team-item overflow-hidden d-block">
-                                    <img src="assets/images/team/team-img-01.jpg" alt="...">
-                                    <div class="team-info text-center">
-                                        <h4 class="animation-text">John Doe</h4>
-                                        <div class="animate-line">
-                                            <p>Job Title & Description</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-lg-4 col-sm-6">
-                                <a href="#" class="team-item overflow-hidden d-block">
-                                    <img src="assets/images/team/team-img-01.jpg" alt="...">
-                                    <div class="team-info text-center">
-                                        <h4 class="animation-text">John Doe</h4>
-                                        <div class="animate-line">
-                                            <p>Job Title & Description</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-lg-4 col-sm-6">
-                                <a href="#" class="team-item overflow-hidden d-block">
-                                    <img src="assets/images/team/team-img-01.jpg" alt="...">
-                                    <div class="team-info text-center">
-                                        <h4 class="animation-text">John Doe</h4>
-                                        <div class="animate-line">
-                                            <p>Job Title & Description</p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-lg-4 col-sm-6">
-                                <a href="#" class="team-item overflow-hidden d-block">
-                                    <img src="assets/images/team/team-img-01.jpg" alt="...">
-                                    <div class="team-info text-center">
-                                        <h4 class="animation-text">John Doe</h4>
-                                        <div class="animate-line">
-                                            <p>Job Title & Description</p>
-                                        </div>
-                                    </div>
-                                </a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -360,16 +323,18 @@
                     <div class="cta-content">
                         <div class="sub-title"><span>CAREERS</span></div>
                         <h2 class="animation-text">Cool Careers</h2>
-                        <div class="animate-line">
+                        <div class="animation-line">
                             <p>Discover a career where innovation meets tradition, and your growth and development are as important as the excellent results we deliver. Apply now and build not just HVACR systems but a legacy of excellence.</p>
                         </div>
-                        <a href="#" class="georgia-btn transparent-btn">
-                            <span>view details</span>
-                            <span class="transparent-btn-border"></span>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="34" height="16" viewBox="0 0 34 16" fill="none">
-                                <path d="M33.3614 8.73787C33.7519 8.34734 33.7519 7.71418 33.3614 7.32365L26.9974 0.959694C26.6069 0.56917 25.9738 0.56917 25.5832 0.959694C25.1927 1.35022 25.1927 1.98338 25.5832 2.37391L31.2401 8.03076L25.5832 13.6876C25.1927 14.0781 25.1927 14.7113 25.5832 15.1018C25.9738 15.4924 26.6069 15.4924 26.9974 15.1018L33.3614 8.73787ZM0.654297 9.03076L32.6543 9.03076V7.03076L0.654297 7.03076L0.654297 9.03076Z" fill="white"></path>
-                            </svg>
-                        </a>
+                        <div class="animation-line">
+                            <a href="#" class="georgia-btn transparent-btn">
+                                <span>view details</span>
+                                <span class="transparent-btn-border"></span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="34" height="16" viewBox="0 0 34 16" fill="none">
+                                    <path d="M33.3614 8.73787C33.7519 8.34734 33.7519 7.71418 33.3614 7.32365L26.9974 0.959694C26.6069 0.56917 25.9738 0.56917 25.5832 0.959694C25.1927 1.35022 25.1927 1.98338 25.5832 2.37391L31.2401 8.03076L25.5832 13.6876C25.1927 14.0781 25.1927 14.7113 25.5832 15.1018C25.9738 15.4924 26.6069 15.4924 26.9974 15.1018L33.3614 8.73787ZM0.654297 9.03076L32.6543 9.03076V7.03076L0.654297 7.03076L0.654297 9.03076Z" fill="white"></path>
+                                </svg>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -475,6 +440,8 @@
         <script src="assets/js/jquery.min.js"></script>
         <!-- bootstrap min js -->
         <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <!-- swiper bundle js-->
+        <script src="assets/js/swiper-bundle.min.js"></script>
         <!-- scrollTrigger min js -->
         <script src="assets/js/scrollTrigger.min.js"></script>
         <!-- gsap split min js -->
