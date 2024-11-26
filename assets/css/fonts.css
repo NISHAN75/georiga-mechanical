@@ -1,37 +1,38 @@
 /* Helvetica */
 @font-face {
-font-family: "Helvetica",;
-src: url('../fonts/Helvetica.woff2') format('woff2'),
-    url('../fonts/Helvetica.woff') format('woff');
-font-weight: normal;
-font-style: normal;
-font-display: swap;
-}
-
-/* Helvetica nenu */
-@font-face {
-    font-family: "helvetica-neue-condensed";
-    src: url('../fonts/HelveticaNeue-Condensed.woff2') format('woff2'),
-        url('../fonts/HelveticaNeue-Condensed.woff') format('woff');
+    font-family: "Helvetica",;
+    src: url('../fonts/Helvetica.woff2') format('woff2'),
+        url('../fonts/Helvetica.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
-}
-@font-face {
-    font-family: "helvetica-neue-condensed";
-    src: url('../fonts/HelveticaNeue-MediumCond.woff2') format('woff2'),
-        url('../fonts/HelveticaNeue-MediumCond.woff') format('woff');
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
-}
-
-
-@font-face {
-    font-family: "helvetica-neue-condensed";
-    src: url('../fonts/HelveticaNeue-CondensedBold.woff2') format('woff2'),
-        url('../fonts/HelveticaNeue-CondensedBold.woff') format('woff');
-    font-weight: 700;
-    font-style: normal;
-    font-display: swap;
-}
+    }
+    
+    /* Helvetica nenu */
+    @font-face {
+        font-family: "helvetica-neue-condensed";
+        src: url('../fonts/HelveticaNeue-Condensed.woff2') format('woff2'),
+            url('../fonts/HelveticaNeue-Condensed.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+    }
+    @font-face {
+        font-family: "helvetica-neue-condensed";
+        src: url('../fonts/HelveticaNeue-MediumCond.woff2') format('woff2'),
+            url('../fonts/HelveticaNeue-MediumCond.woff') format('woff');
+        font-weight: 500;
+        font-style: normal;
+        font-display: swap;
+    }
+    
+    
+    @font-face {
+        font-family: "helvetica-neue-condensed";
+        src: url('../fonts/HelveticaNeue-CondensedBold.woff2') format('woff2'),
+            url('../fonts/HelveticaNeue-CondensedBold.woff') format('woff');
+        font-weight: 700;
+        font-style: normal;
+        font-display: swap;
+    }
+    
