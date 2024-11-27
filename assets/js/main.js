@@ -31,10 +31,115 @@
             });
         });
 
-
-
+        // nice select
+        $('select').niceSelect();
 
         // testing
+        const $chooseFile = $('.choose-file');
+const $dropZone = $('#file-drop-zone');
+const $fileInput = $('#file-input');
+const $fileDetails = $('#file-details');
+const MAX_FILE_SIZE_MB = 25; // Maximum file size in MB
+
+// Trigger file input when clicking the "Choose File" button
+$chooseFile.on('click', function (e) {
+    e.preventDefault(); // Prevent the default action
+    $fileInput.click(); // Trigger the file input click
+});
+
+// Trigger file input when clicking the drop zone
+$dropZone.on('click', function (e) {
+    e.preventDefault(); // Prevent the default action
+    $fileInput.click(); // Trigger the file input click
+});
+
+// Highlight the drop zone on drag over
+$dropZone.on('dragover', function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+    $dropZone.addClass('dragover');
+});
+
+// Remove highlight on drag leave
+$dropZone.on('dragleave', function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+    $dropZone.removeClass('dragover');
+});
+
+// Handle file drop
+$dropZone.on('drop', function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+    $dropZone.removeClass('dragover');
+
+    const files = e.originalEvent.dataTransfer.files;
+    handleFiles(files);
+});
+
+// Handle file input change (when file is selected via the input)
+$fileInput.on('change', function (e) {
+    const files = e.target.files;
+    handleFiles(files);
+});
+
+// Function to handle file details
+function handleFiles(files) {
+    if (files.length > 0) {
+        const file = files[0];
+        const fileSizeMB = file.size / (1024 * 1024); // Convert file size to MB
+
+        if (fileSizeMB > MAX_FILE_SIZE_MB) {
+            $fileDetails.html(`
+                <p style="color: red;"><strong>Error:</strong> File size exceeds the maximum limit of ${MAX_FILE_SIZE_MB} MB.</p>
+            `);
+        } else {
+            $fileDetails.html(`
+                <p><strong>File Name:</strong> ${file.name}</p>
+                <p><strong>File Size:</strong> ${fileSizeMB.toFixed(2)} MB</p>
+                <p><strong>File Type:</strong> ${file.type}</p>
+            `);
+        }
+    }
+}
+        // testing
+
+
+
+        // Magnific popup
+		$('.trigger-popup').magnificPopup({
+			type: 'iframe',
+			iframe: {
+				markup: '<div class="mfp-iframe-scaler">' +
+					'<div class="mfp-close"></div>' +
+					'<iframe class="mfp-iframe" frameborder="0" allowfullscreen allow="autoplay *; fullscreen *"></iframe>' +
+					'</div>',
+				patterns: {
+					youtube: {
+						index: 'youtube.com/',
+						id: function (url) {
+							var m = url.match(/[\\?\\&]v=([^\\?\\&]+)/);
+							if (!m || !m[1]) return null;
+							return m[1];
+						},
+						src: '//www.youtube.com/embed/%id%?autoplay=1&iframe=true'
+					},
+					vimeo: {
+						index: 'vimeo.com/',
+						id: function (url) {
+							var m = url.match(/(https?:\/\/)?(www.)?(player.)?vimeo.com\/([a-z]*\/)*([0-9]{6,11})[?]?.*/);
+							if (!m || !m[5]) return null;
+							return m[5];
+						},
+						src: '//player.vimeo.com/video/%id%?autoplay=1'
+					}
+				}
+			},
+		});
+
+
+
+        
         // title set
         if (windowOn.width() > 1499) {
             windowOn.on('resize load', function () {
