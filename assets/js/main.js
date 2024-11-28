@@ -34,75 +34,7 @@
         // nice select
         $('select').niceSelect();
 
-        // testing
-        const $chooseFile = $('.choose-file');
-const $dropZone = $('#file-drop-zone');
-const $fileInput = $('#file-input');
-const $fileDetails = $('#file-details');
-const MAX_FILE_SIZE_MB = 25; // Maximum file size in MB
-
-// Trigger file input when clicking the "Choose File" button
-$chooseFile.on('click', function (e) {
-    e.preventDefault(); // Prevent the default action
-    $fileInput.click(); // Trigger the file input click
-});
-
-// Trigger file input when clicking the drop zone
-$dropZone.on('click', function (e) {
-    e.preventDefault(); // Prevent the default action
-    $fileInput.click(); // Trigger the file input click
-});
-
-// Highlight the drop zone on drag over
-$dropZone.on('dragover', function (e) {
-    e.preventDefault();
-    e.stopPropagation();
-    $dropZone.addClass('dragover');
-});
-
-// Remove highlight on drag leave
-$dropZone.on('dragleave', function (e) {
-    e.preventDefault();
-    e.stopPropagation();
-    $dropZone.removeClass('dragover');
-});
-
-// Handle file drop
-$dropZone.on('drop', function (e) {
-    e.preventDefault();
-    e.stopPropagation();
-    $dropZone.removeClass('dragover');
-
-    const files = e.originalEvent.dataTransfer.files;
-    handleFiles(files);
-});
-
-// Handle file input change (when file is selected via the input)
-$fileInput.on('change', function (e) {
-    const files = e.target.files;
-    handleFiles(files);
-});
-
-// Function to handle file details
-function handleFiles(files) {
-    if (files.length > 0) {
-        const file = files[0];
-        const fileSizeMB = file.size / (1024 * 1024); // Convert file size to MB
-
-        if (fileSizeMB > MAX_FILE_SIZE_MB) {
-            $fileDetails.html(`
-                <p style="color: red;"><strong>Error:</strong> File size exceeds the maximum limit of ${MAX_FILE_SIZE_MB} MB.</p>
-            `);
-        } else {
-            $fileDetails.html(`
-                <p><strong>File Name:</strong> ${file.name}</p>
-                <p><strong>File Size:</strong> ${fileSizeMB.toFixed(2)} MB</p>
-                <p><strong>File Type:</strong> ${file.type}</p>
-            `);
-        }
-    }
-}
-        // testing
+       
 
 
 
@@ -400,6 +332,28 @@ function handleFiles(files) {
                 e.preventDefault();
             }
         });
+        const $footerMenu = $(".main-footer-wrapper");
+        $footerMenu.find(".footer-title").on("click", function (e) {
+            const $footerItem = $(this).closest(".footer-item");
+
+            // Remove 'active' class from all other menu items
+            $footerMenu.find(".footer-item").removeClass("active");
+            $footerItem.addClass("active");
+            const $footerSubMenu = $(this).siblings(".footer-sub-menu");
+            if ($footerSubMenu.is(":visible")) {
+                $footerSubMenu.slideUp();
+                $footerItem.removeClass("active");
+            } else {
+                // Slide down if not visible
+                $(".footer-sub-menu").slideUp();
+                $footerSubMenu.stop(true, true).slideDown();
+            }
+            // Prevent default behavior for menu-link class items
+            if ($footerItem.hasClass(".footer-menu")) {
+                e.preventDefault();
+            }
+        });
+       
         // mobile menu
 
 

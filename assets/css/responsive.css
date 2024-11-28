@@ -83,8 +83,8 @@
     .container-md,
     .container-sm,
     .container-xl {
-        padding-left: 15px;
-        padding-right: 15px;
+        padding-left: 40px;
+        padding-right: 40px;
     }
 
     /* offcanvas */
@@ -103,7 +103,6 @@
     .content-block-item {
         margin-bottom: 80px;
     }
-
     /* content block section end */
     /* about section start */
     .about-img-wrapper .shape-a-clip::after,
@@ -165,14 +164,33 @@
 
 
     /* carrer future section start */
-    .contact-wrapper {
+    .carrer-future-area .contact-wrapper {
         padding-left: 30px;
     }
     /* carrer future section end */
 
+    /* contact sectoin start */
+    .contact-content {
+        padding-left: 0;
+    }
+    .contact-form-wrapper {
+        margin-left: 70px;
+    }
+    .contact-form-wrapper  .contact-wrapper {
+        padding: 35px;
+    }
+    .contact-form-wrapper.shape-a-clip::after, .contact-form-wrapper.shape-clip::before {
+        height: 300px;
+        width: 300px;
+    }
+    /* contact sectoin end */
+
     /* footer section start */
-    .footer-logo img {
+    .footer-logo{
         max-width: 300px;
+    }
+    .footer-logo img {
+        max-width: 287px;
     }
 
     .main-footer-wrapper {
@@ -190,6 +208,7 @@
         left: calc(50% - 130px);
     }
 
+
     /* footer section end */
 
 
@@ -197,8 +216,11 @@
 
 /* max-width 991 */
 @media (max-width: 991.98px) {
-
+    body {
+        font-size: 16px;
+    }
     /* heading style */
+    .application-content h1 ,
     .inner-page-content h1 ,
     .map-area h3,
     .banner-content h1,
@@ -207,12 +229,13 @@
     }
 
     h2 {
-        font-size: 45px;
+        font-size: 42px;
     }
 
     h3 {
         font-size: 40px;
     }
+    .thank-you-contact-info h4 ,
     .team-info h4 ,
     h4 {
         font-size: 30px;
@@ -228,16 +251,16 @@
 
     /* heading style */
     /* all button */
-    .georgia-btn {
-        font-size: 18px;
-    }
 
-    .banner-content .georgia-btn,
-    .right-header-wrapper .georgia-btn {
-        padding: 12px 35px;
+    .banner-content .georgia-btn {
+        padding: 9px 19px 9px 19px;
         clip-path: polygon(0 0, 100% 0, 100% calc(100% - 21px), calc(100% - 21px) 100%, 0 100%);
+        text-align: start;
+        max-width: 239px;
+        margin-right: auto;
+        margin-left: auto;
+        font-size: 17px;
     }
-
     /* all button */
 
     /* w-100 */
@@ -248,6 +271,8 @@
     /* w-100 */
 
     /* all padding */
+    .erro-page-area,
+    .contact-area ,
     .carrer-future-area ,
     .our-priority-area ,
     .single-project-content-area ,
@@ -290,12 +315,16 @@
 
 
     /* banner section start */
+    .banner-area.contact-banner ,
     .banner-area.small-banner ,
     .banner-area.about-banner-area {
         min-height: 500px;
         padding: 150px 0;
     }
-    
+    .banner-area {
+        min-height: 606px;
+        padding: 165px 0 100px;
+    }
     /* banner section end */
 
     /* content block section start */
@@ -307,14 +336,32 @@
         max-width: 100%;
     }
     .shape-left-top {
-        padding-top: 15px;
-        padding-left: 15px;
+        padding-top: 10px;
+        padding-left: 10px;
     }
     .shape-right-top {
-        padding-top: 15px;
-        padding-right: 15px;
+        padding-top: 10px;
+        padding-right: 10px;
+    }
+    .shape-left-bottom {
+        padding-left: 10px;
+        padding-bottom: 10px;
     }
     /* content block section end */
+
+
+    /* map section start */
+    .map-area h3 {
+        top: 50%;
+        transform:translate(-50% , -50%)
+    }
+    .map-area img{
+        min-height: 214px;
+        width: 100%;
+        object-fit: cover;
+    }
+    /* map section end */
+
     /* about section start */
     .about-img-wrapper .shape-a-clip::after,
     .about-img-wrapper .shape-clip::before {
@@ -428,7 +475,7 @@
     .cta-area .cta-bg.parallax-img{
         width: 100%;
         position: static;
-        height: 400px;
+        height: 350px;
     }
     .contact-cta .cta-content  ,
     .cta-content {
@@ -481,7 +528,7 @@
     .carrer-future-content {
         max-width: 100%;
     }
-    .contact-wrapper {
+    .carrer-future-area .contact-wrapper {
         max-width: 100%;
         padding-left: 0;
     }
@@ -489,6 +536,25 @@
         margin-top: 25px;
     }
     /* carrer future section end */
+
+    /* contact sectoin start */
+    .contact-area .col:first-child {
+        max-width: 100%;
+        flex-basis: 100%;
+    }
+    .contact-form-wrapper {
+        margin-left: 0;
+    }
+    .address-wrapper {
+        margin-top: 10px;
+        margin-bottom: 17px;
+    }
+    .contact-form-wrapper.shape-a-clip::after, 
+    .contact-form-wrapper.shape-clip::before {
+        height: 250px;
+        width: 250px;
+    }
+    /* contact sectoin end */
 
 
     /* footer section start */
@@ -514,6 +580,31 @@
 
     /* footer section end */
 
+    /* error page section start */
+    .error-content h1 {
+        font-size: 200px;
+    }
+    .error-content p {
+        font-size: 45px;
+    }
+    .error-content .georgia-btn {
+        margin-top: 30px;
+    }
+    .erro-page-area {
+        padding: 150px 0;
+    }
+    /* error page section end */
+
+    /* thank you page section start */
+    .application-page-area ,
+    .thank-you-section-area {
+        padding: 100px 0;
+    }
+    .thank-you-content .georgia-btn {
+        margin-top: 20px;
+    }
+    /* thank you page section end */
+
 
 }
 
@@ -521,22 +612,21 @@
 @media (max-width: 767.98px) {
 
     /* heading style */
+    .application-content h1 ,
+    .thank-you-content h1 ,
     .team-member-info h1 ,
     .inner-page-content h1 ,
     .location-content-title h1 ,
     .map-area h3,
     .banner-content h1,
     h1 {
-        font-size: 45px;
-    }
-
-    h2 {
-        font-size: 40px;
+        font-size: 52px;
     }
 
     h3 {
         font-size: 35px;
     }
+    .thank-you-contact-info h4 ,
     .team-info h4 ,
     h4 {
         font-size: 28px;
@@ -563,6 +653,7 @@
     /* offcanvas */
 
     /* all padding */
+    .contact-area ,
     .carrer-future-area ,
     .our-priority-area ,
     .single-project-content-area ,
@@ -588,12 +679,25 @@
     /* header section end */
 
     /* banner section start */
+    .banner-area.contact-banner ,
     .banner-area {
         padding: 130px 0;
     }
     /* banner section end */
 
 
+    /* industries section start */
+    .industries-area .row {
+        --bs-gutter-x: 18px;
+        --bs-gutter-y: 28px;
+    }
+    /* industries section end */
+
+    /* map section start */
+    .map-area h3 {
+        font-size: 42px;
+    }
+    /* map section end */
 
     /* about section start */
     .about-img-wrapper .shape-a-clip::after,
@@ -606,6 +710,8 @@
         min-height: 300px;
     }
     /* about section end */
+
+
 
 
     /* single team section start */
@@ -650,7 +756,15 @@
     /* our  priority section end */
 
 
-
+    /* contact sectoin start */
+    .contact-form-wrapper  .contact-wrapper {
+        padding: 35px 20px;
+    }
+    .contact-form-wrapper .nice-select, 
+    .contact-form-wrapper .contact-info {
+        margin-bottom: 10px;
+    }
+    /* contact sectoin end */
 
 
     /* footer section start */
@@ -660,16 +774,104 @@
 
     /* footer section end */
 
+    /* error page section start */
+    .error-content h1 {
+        font-size: 150px;
+    }
+    .error-content p {
+        font-size: 35px;
+    }
+    .erro-page-area {
+        padding: 100px 0;
+    }
+    /* error page section end */
+
+
+    /* thank you page section start */
+    .thank-you-contact-info {
+        padding: 30px 20px;
+    }
+    .application-page-area,
+    .thank-you-section-area {
+        padding: 70px 0;
+    }
+    .thank-you-content-info p {
+        margin-bottom: 17px;
+    }
+    .thank-you-contact-info ul li a, .thank-you-contact-info ul li {
+        font-size: 20px;
+    }
+    /* thank you page section end */
+
+
+    /* footer section start */
+    .footer-logo{
+        max-width: 287px;
+        margin-right: auto;
+        margin-left: auto;
+        display: block;
+    }
+    .main-footer-wrapper .col:nth-child(3),
+    .main-footer-wrapper .col:nth-child(2),
+    .main-footer-wrapper .col:nth-child(1) {
+        margin-right: 0px;
+        max-width: 100%;
+        flex-basis: 100%;
+    }
+    .footer-sub-menu {
+        display: none;
+    }
+    .footer-inner-item {
+        margin-top: 22px;
+    }
+    .footer-inner-item ul li {
+        margin-bottom: 22px;
+    }
+    .footer-item > ul {
+        margin-top: 4px;
+    }
+    .footer-title{
+        position: relative;
+        z-index: 1;
+        display: inline-block;
+    }
+    .footer-title::before {
+        content: "";
+        position: absolute;
+        top: 7px;
+        right: -20px;
+        display: inline-block;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 12px 6px 0px 6px;
+        border-color: #C1132A transparent transparent transparent;
+        transform: rotate(0deg);
+        transform-origin: center;
+        transition: all 0.3s ease-in-out;
+    }
+    .footer-item.active .footer-title::before {
+        border-color: #ffffff transparent transparent transparent;
+    }
+    .footer-item.active .footer-title::before{
+        transform: rotate(-180deg);
+    }
+    .socalis-link {
+        gap: 39px;
+        margin-top: 22px;
+    }
+    /* footer section end */
+
 }
 
 /* max-width 575 */
 @media (max-width: 575.98px) {
+    .sub-title {
+        font-size: 16px;
 
-    /* heading style */
-    h2 {
-        font-size: 35px;
     }
 
+    /* heading style */
     h3 {
         font-size: 30px;
     }
@@ -682,6 +884,7 @@
     }
 
     /* header section end */
+    .banner-area.contact-banner ,
     .banner-area.small-banner ,
     .banner-area.about-banner-area {
         min-height: 400px;
@@ -696,6 +899,12 @@
     }
 
     /* content block section end */
+
+    /* cta section start */
+    .modal-bg, .cta-area .cta-bg.parallax-img {
+        height: 265px;
+    }
+    /* cta section end */
 
 
     /* about section start */
@@ -725,15 +934,13 @@
 
 
 
-    /* footer section start */
-    .main-footer-wrapper .col:nth-child(3),
-    .main-footer-wrapper .col:nth-child(2),
-    .main-footer-wrapper .col:nth-child(1) {
-        margin-right: 0px;
-        max-width: 100%;
-        flex-basis: 50%;
+
+
+    /* application section start */
+    .application-content .georgia-btn {
+        margin-top: 25px;
     }
-    /* footer section end */
+    /* application section end  */
 
 
 }
@@ -758,6 +965,14 @@
     }
     /* header section end */
 
+    /* banner section start */
+    .home-page .banner-content {
+        max-width: 270px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    /* banner section end */
+
 
     /* single team section start */
     .single-team-img.shape-a-clip::after, .single-team-img.shape-clip::before {
@@ -771,23 +986,19 @@
         height: 200px;
         width: 200px;
     }
-
-    .shape-left-top {
-        padding-top: 12px;
-        padding-left: 12px;
+    .content-block-img img{
+        min-height: 268px;
+        width: 100%;
+        object-fit: cover;
     }
-
-    .shape-right-top {
-        padding-top: 12px;
-        padding-right: 12px;
-    }
-
-    .shape-right-bottom {
-        padding-right: 12px;
-        padding-bottom: 12px;
-    }
-
     /* content block section end */
+
+    /* industries section start */
+    .industries-card img {
+        height: 143px;
+        object-fit: cover;
+    }
+    /* industries section end */
 
 
     /* related project section start */
@@ -818,6 +1029,18 @@
         min-height: 280px;
     }
     /* related project section end */  
+
+
+    /* contact sectoin start */
+    .contact-form-wrapper.shape-a-clip::after, 
+    .contact-form-wrapper.shape-clip::before {
+        height: 200px;
+        width: 200px;
+    }
+    /* contact sectoin end */
+
+
+
     /* footer section start */
     .footer-logo img {
         max-width: 250px;
