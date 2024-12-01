@@ -1,6 +1,12 @@
 (function ($) {
     $(document).ready(function () {
-
+        $(document).on('click', '.scroll-btn', function (e) {
+            e.preventDefault();
+            const $nextSection = $('.content-block-area');
+            if ($nextSection.length) {
+                lenis.scrollTo($nextSection[0], { offset: -100 });
+            }
+        });
         // header sticky
         var windowOn = $(window);
         windowOn.on('scroll', function () {
@@ -386,14 +392,6 @@
                 768: {
                     slidesPerView: 2,
                 },
-                // when window width is >= 992px
-                992: {
-                    slidesPerView: 2,
-                },
-                // when window width is >= 1200px
-                1200: {
-                    slidesPerView: 2,
-                }
             }
         });
         $(".tp-swiper-button-next").on("click", function(e){

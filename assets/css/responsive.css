@@ -14,6 +14,7 @@
         right: -50px;
         left: auto;
     }
+    
 }
 /* min-width 1500 */
 @media (max-width: 1500px) {
@@ -36,6 +37,8 @@
 
 /* max-width 1399 */
 @media (max-width: 1399.98px) {
+
+
 
     /* about section start */
     .about-img-wrapper .shape-a-clip::after,
@@ -65,7 +68,7 @@
 
     /* footer section start */
     .top-footer-wrapper::before {
-        left: calc(50% - 50px);
+        left: calc(50% - 70px);
     }
 
     .main-footer-wrapper {
@@ -73,6 +76,12 @@
     }
 
     /* footer section end */
+
+    /* thank you page start */
+    .thank-you-section-area .row {
+        --bs-gutter-x: 50px;
+    }
+    /* thank you page end */
 }
 
 /* max-width 1199 */
@@ -86,6 +95,11 @@
         padding-left: 40px;
         padding-right: 40px;
     }
+    .header-offcanvas .container,
+    .header-wrapper .container{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
 
     /* offcanvas */
     .main-menu {
@@ -96,7 +110,12 @@
         width: 50vh;
         height: 50vh;
     }
-
+    .close-icon {
+        transform: translateY(-2px);
+    }
+    .menu-icon {
+        margin-top: -2px;
+    }
     /* offcanvas */
 
     /* content block section start */
@@ -116,6 +135,12 @@
     /* single team section start */
     .back-btn-wrapper {
         margin-bottom: 20px;
+    }
+    .single-team-information {
+        padding-left: 30px;
+    }
+    .team-timeline-wrapper {
+        padding: 25px 20px;
     }
     /* single team section end */
     /* single project section start */
@@ -153,7 +178,7 @@
         max-width: 490px;
     }
     .cta-content {
-        max-width: 500px;
+        max-width: 470px;
     }
 
     .sub-title {
@@ -223,7 +248,8 @@
     .application-content h1 ,
     .inner-page-content h1 ,
     .map-area h3,
-    .banner-content h1,
+    .banner-content h2,
+    .banner-content h1 ,
     h1 {
         font-size: 60px;
     }
@@ -250,6 +276,7 @@
     }
 
     /* heading style */
+
     /* all button */
 
     .banner-content .georgia-btn {
@@ -264,6 +291,7 @@
     /* all button */
 
     /* w-100 */
+    .team-timeline-wrapper ,
     .industries-content-2 p,
     .industries-content p{
         max-width: 100%;
@@ -271,6 +299,7 @@
     /* w-100 */
 
     /* all padding */
+    .featured-project-area ,
     .erro-page-area,
     .contact-area ,
     .carrer-future-area ,
@@ -298,6 +327,8 @@
 
     /* modal section end */
 
+
+
     
     /* header  */
     .header-offcanvas.version-2 .main-logo img ,
@@ -311,25 +342,41 @@
      .right-header-wrapper {
         gap: 20px;
     }
+    .mobile-menu .sub-menu {
+        padding-bottom: 18px;
+        padding-left: 0;
+    }
+
     /* header  */
+
+    /* offcanvas */
+    .offcanvas-footer  ,
+    .offcanvas-body {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .menu-icon {
+        margin-top: -1px;
+    }
+    /* offcanvas */
 
 
     /* banner section start */
     .banner-area.contact-banner ,
     .banner-area.small-banner ,
     .banner-area.about-banner-area {
-        min-height: 500px;
-        padding: 150px 0;
+        min-height: 451px;
+        padding: 150px 0 100px;
     }
     .banner-area {
         min-height: 606px;
-        padding: 165px 0 100px;
+        padding: 200px 0 100px;
     }
     /* banner section end */
 
     /* content block section start */
     .content-block-item {
-        margin-bottom: 50px;
+        margin-bottom: 54px;
     }
     .content-block-wrapper p ,
     .content-block-wrapper {
@@ -347,13 +394,18 @@
         padding-left: 10px;
         padding-bottom: 10px;
     }
+    .shape-right-bottom {
+        padding-right: 10px;
+        padding-bottom: 10px;
+    }
     /* content block section end */
 
 
     /* map section start */
     .map-area h3 {
         top: 50%;
-        transform:translate(-50% , -50%)
+        transform: translate(-50% , -50%);
+        margin-top: -8px;
     }
     .map-area img{
         min-height: 214px;
@@ -374,18 +426,17 @@
     }
 
     .about-img-wrapper {
-        margin-top: 30px;
+        margin-top: 40px;
     }
 
-    .about-img-wrapper img,
-    .about-img-wrapper .about-video-item {
-        height: 350px;
+    .about-img-wrapper .content-block-img{
+        height: 370px;
     }
     .about-content-info .georgia-btn {
         padding: 15px 25px;
     }
     .about-content-info p {
-        margin-bottom: 18px;
+        margin-bottom: 22px;
     }
     .about-content h2 {
         margin-bottom: 12px;
@@ -432,6 +483,15 @@
     }
     /* single team section end */
 
+    /*  featured project section start */
+    .featured-project-slider {
+        margin-top: 30px;
+    }
+    .project-content-info {
+        margin-top: 10px;
+    }
+    /*  featured project section end  */
+
 
     /* single project section start */
     .location-content-wrapper-info {
@@ -458,6 +518,7 @@
     .single-project-details {
         padding-top: 60px;
     }
+ 
     /* single project section end */
     /* related project section start */
     .related-project-content {
@@ -477,16 +538,16 @@
         position: static;
         height: 350px;
     }
-    .contact-cta .cta-content  ,
-    .cta-content {
+    .contact-cta .cta-content, .cta-content {
         max-width: 100%;
-        padding: 30px 0 50px;
+        padding: 35px 0 50px;
     }
-
+    .cta-content .transparent-btn {
+        margin-top: 15px;
+    }
     .sub-title {
-        margin-bottom: 15px;
+        margin-bottom: 28px;
     }
-
     .sub-title span {
         padding-right: 15px;
     }
@@ -509,6 +570,20 @@
     /* popup video section start */
     .video-wrapper-area {
         min-height: 500px;
+    }
+    .video-icon {
+        height: 80px;
+        width: 80px;
+    }
+    .video-icon svg {
+        height: 30px;
+        width: 30px;
+    }
+    .video-icon-wrapper {
+        gap: 12px;
+    }
+    .video-caption {
+        font-size: 18px;
     }
     /* popup video section end */
 
@@ -554,20 +629,34 @@
         height: 250px;
         width: 250px;
     }
+    .contact-info {
+        margin-bottom: 10px;
+    }
+    .contact-info label {
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
     /* contact sectoin end */
 
 
     /* footer section start */
+
+
     .top-footer-wrapper::before {
-        display: none;
+        left: 0;
+        height: 0.5px;
+        width: 100%;
+        top: 185px;
     }
-
+    .top-footer-wrapper > .container > .row {
+        --bs-gutter-y: 60px;
+    }
     .main-footer-wrapper {
-        padding-left: 0px;
+        padding-left: 33px;
+        padding-right: 33px;
     }
-
     .top-footer-wrapper {
-        padding: 50px 0;
+        padding: 33px 0 43px;
     }
 
     .footer-inner-item {
@@ -577,7 +666,15 @@
     .footer-inner-item ul li {
         margin-bottom: 10px;
     }
-
+    .copy-right-wrapper .row {
+        --bs-gutter-y: 23px;
+    }
+    .copy-right-wrapper {
+        padding: 15px 0 13px;
+    }
+    .footer-item > address{
+        max-width: 190px;
+    }
     /* footer section end */
 
     /* error page section start */
@@ -618,7 +715,8 @@
     .inner-page-content h1 ,
     .location-content-title h1 ,
     .map-area h3,
-    .banner-content h1,
+    .banner-content h2,
+    .banner-content h1 ,
     h1 {
         font-size: 52px;
     }
@@ -640,19 +738,14 @@
 
 
     /* offcanvas */
-    .offcanvas-header ,
-    .header-offcanvas.version-2  .offcanvas-header {
+    .offcanvas-header, .header-offcanvas.version-2  .offcanvas-header {
         padding: 0;
-        padding-top: 48px;
+        padding-top: 51px;
     }
-    .offcanvas-footer {
-        padding: 0;
-        padding-bottom: 50px;
-    }
-
     /* offcanvas */
 
     /* all padding */
+    .featured-project-area ,
     .contact-area ,
     .carrer-future-area ,
     .our-priority-area ,
@@ -668,22 +761,30 @@
 
     /* header section start */
     .header-wrapper {
-        padding: 12px 0;
+        padding: 15px 0;
     }
     .header-sticky .header-wrapper {
-        padding: 12px 0;
+        padding: 15px 0;
     }
     .header-fix {
-        height: 134px;
+        height: 130px;
     }
     /* header section end */
 
     /* banner section start */
-    .banner-area.contact-banner ,
-    .banner-area {
-        padding: 130px 0;
+    .banner-area.contact-banner, .banner-area {
+        padding: 190px 0 50px;
+    }
+    .banner-content h1 {
+        margin-bottom: 26px;
     }
     /* banner section end */
+
+    /* content block section start */
+    .content-block-wrapper h2 {
+        margin-bottom: 8px;
+    }
+    /* content block section end */
 
 
     /* industries section start */
@@ -695,7 +796,7 @@
 
     /* map section start */
     .map-area h3 {
-        font-size: 42px;
+        font-size: 40px;
     }
     /* map section end */
 
@@ -705,9 +806,8 @@
         height: 180px;
         width: 180px;
     }
-    .about-img-wrapper .about-video-item,
-    .about-img-wrapper img {
-        min-height: 300px;
+    .about-img-wrapper .content-block-img{
+        height: 320px;
     }
     /* about section end */
 
@@ -722,8 +822,8 @@
         padding: 20px;
     }
     .team-timeline-wrapper ul li {
-        line-height: 1.5;
-        margin-bottom: 12px;
+        line-height: 1.2;
+        margin-bottom: 10px;
     }
     .team-timeline-wrapper ul li:last-child{
         margin-bottom: 0;
@@ -805,12 +905,7 @@
 
 
     /* footer section start */
-    .footer-logo{
-        max-width: 287px;
-        margin-right: auto;
-        margin-left: auto;
-        display: block;
-    }
+
     .main-footer-wrapper .col:nth-child(3),
     .main-footer-wrapper .col:nth-child(2),
     .main-footer-wrapper .col:nth-child(1) {
@@ -857,8 +952,15 @@
         transform: rotate(-180deg);
     }
     .socalis-link {
+        gap: 31px;
+        margin-top: 10px;
+    }
+    .contact-item .socalis-link {
         gap: 39px;
         margin-top: 22px;
+    }
+    .website-design-caption{
+        display: none;
     }
     /* footer section end */
 
@@ -877,12 +979,36 @@
     }
 
     /* heading style */
-
+    /* offcanvas */
+    .offcanvas-header, .header-offcanvas.version-2  .offcanvas-header {
+        padding: 0;
+        padding-top: 39px;
+    }
+    .offcanvas-body {
+        padding-top: 52px;
+    }
+    /* offcanvas */
     /* header section start */
     .menu-toogle {
-        font-size: 18px;
+        font-size: 16px;
+        gap: 10px;
     }
-
+    .menu-icon {
+        height: 15px;
+        margin-top: -4px;
+    }
+    .close-icon {
+        transform: translateY(-1px);
+    }
+    .menu-icon span:nth-child(2) {
+        top: 7.5px;
+    }
+    .top-header-caption p {
+        font-size: 12px;
+    }
+    .top-header-caption {
+        padding: 5px 0;
+    }
     /* header section end */
     .banner-area.contact-banner ,
     .banner-area.small-banner ,
@@ -908,9 +1034,8 @@
 
 
     /* about section start */
-    .about-img-wrapper .about-video-item,
-    .about-img-wrapper img {
-        min-height: 200px;
+    .about-img-wrapper .content-block-img{
+        height: 256px;
     }
 
     /* about section end */
@@ -932,15 +1057,23 @@
     }
     /* our  priority section end */
 
-
-
-
+    /* carrer futrue section start */
+    .carrer-future-img-wrapper img{
+        min-height: 250px;
+    }
+    /* carrer futrue section end */
 
     /* application section start */
     .application-content .georgia-btn {
         margin-top: 25px;
     }
     /* application section end  */
+
+    /* footer section start */
+    .footer-logo{
+        padding: 0 12px;
+    }
+    /* footer section end */
 
 
 }
@@ -955,21 +1088,19 @@
 
     /* section title */
     /* header section start */
-    .header-offcanvas.version-2 .main-logo img ,
-    .header-sticky .main-logo img ,
+    .header-offcanvas.version-2 .main-logo img, 
+    .header-sticky .main-logo img, 
     .main-logo img {
-        max-width: 180px;
+        max-width: 213px;
     }
     .header-fix {
-        height: 108px;
+        height: 94px;
     }
     /* header section end */
 
     /* banner section start */
     .home-page .banner-content {
-        max-width: 270px;
-        margin-right: auto;
-        margin-left: auto;
+        padding: 0 18px;
     }
     /* banner section end */
 
@@ -1013,14 +1144,35 @@
 
 /* max-width 383 */
 @media (max-width: 383.98px) {
-
-    /* header section start */
-    .menu-toogle {
-        font-size: 16px;
-        gap: 10px;
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl {
+        padding-left: 20px;
+        padding-right: 20px;
     }
-
+    .georgia-btn {
+        font-size: 18px;
+    }
+    /* header section start */
+    .header-offcanvas.version-2 .main-logo img, .header-sticky .main-logo img, .main-logo img {
+        max-width: 150px;
+    }
+    .menu-icon {
+        margin-top: -3px;
+    }
+    .header-offcanvas .container, .header-wrapper .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
     /* header section end */
+
+    /* banner section start */
+    .home-page .banner-content {
+        padding: 0;
+    }
+    /* banner section end */
     /* related project section start */
     .single-project-logo img {
         max-width: 80px;
@@ -1045,7 +1197,9 @@
     .footer-logo img {
         max-width: 250px;
     }
-
+    .copy-right-wrapper .row {
+        --bs-gutter-y: 10px;
+    }
     .main-footer-wrapper .col:nth-child(3),
     .main-footer-wrapper .col:nth-child(2),
     .main-footer-wrapper .col:nth-child(1) {
